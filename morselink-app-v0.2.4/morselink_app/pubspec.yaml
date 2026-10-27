@@ -1,0 +1,28 @@
+name: morselink_app
+description: MorseLink phone app - shows the device, relays packets over MQTT, runs the field tests.
+publish_to: 'none'
+version: 0.2.4+6
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+# Kept to three plugins, each with a long-stable API:
+#   flutter_blue_plus  Bluetooth LE (the device's Nordic UART Service); 1.x
+#                      (2.x wants a licence argument in connect())
+#   mqtt_client        the internet relay (pure Dart)
+#   geolocator         GPS during tests (also keeps the app running with the screen off)
+# The app's folders come from MainActivity.kt (lib/storage.dart), not a plugin.
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_blue_plus: ^1.35.0
+  mqtt_client: ^10.2.0
+  geolocator: ^13.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0 # (analysis_options.yaml from `flutter create` uses it)
+
+flutter:
+  uses-material-design: true
