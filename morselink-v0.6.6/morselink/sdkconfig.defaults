@@ -1,0 +1,34 @@
+# MorseLink — T-Beam V1.1 (ESP32, 4 MB flash)
+CONFIG_IDF_TARGET="esp32"
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y
+
+# 1 ms scheduler tick: key timeouts and alert scheduling resolve to 1 ms.
+# (Element timing itself uses esp_timer, microsecond resolution.)
+CONFIG_FREERTOS_HZ=1000
+
+# Console on UART0 alongside the logs
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+CONFIG_ESP_CONSOLE_UART_BAUDRATE=115200
+
+# The GPIO ISR stays usable while flash is being written (NVS saves)
+CONFIG_GPIO_CTRL_FUNC_IN_IRAM=y
+
+CONFIG_LOG_DEFAULT_LEVEL_INFO=y
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=10
+
+# The phone link (ble.c): Bluetooth LE only, NimBLE host, one connection,
+# bonds kept in NVS (3 slots: a stranger's pairing, refused, can't push the
+# owner's phone out). An existing sdkconfig keeps the values it already has:
+# after changing a line here, run  idf.py set-target esp32  once (or delete
+# sdkconfig). Options it doesn't have yet are taken from here by themselves.
+CONFIG_BT_ENABLED=y
+CONFIG_BT_NIMBLE_ENABLED=y
+CONFIG_BTDM_CTRL_MODE_BLE_ONLY=y
+CONFIG_BTDM_CTRL_BLE_MAX_CONN=1
+CONFIG_BT_NIMBLE_MAX_CONNECTIONS=1
+# CONFIG_BT_NIMBLE_ROLE_CENTRAL is not set
+# CONFIG_BT_NIMBLE_ROLE_OBSERVER is not set
+CONFIG_BT_NIMBLE_NVS_PERSIST=y
+CONFIG_BT_NIMBLE_MAX_BONDS=3
+CONFIG_BT_NIMBLE_LOG_LEVEL_WARNING=y
