@@ -1,0 +1,803 @@
+========================================================================
+Session 20261021-185110: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.1 (the boards' own setting: the plan's steps below)
+  files: base ML_20261021-185110_base_ABC.jsonl, rover ML_20261021-185110_rover_DEA.jsonl
+  base board ABC: stopped (app) after 60 messages
+  base board ABC: 161 packets heard over LoRa, 2 damaged (RXBAD)
+  base battery: 3961 -> 3951 mV (74 -> 71 %) over 23 min; noise floor -113 dBm
+  rover board DEA: stopped (app) after 60 messages
+  rover board DEA: 161 packets heard over LoRa, 0 damaged (RXBAD)
+  rover battery: 3791 -> 3778 mV (44 -> 39 %) over 23 min; noise floor -110 dBm
+  distance rover-base: median 3 m (min 1, max 9) - GPS based, +/- the fixes' accuracy
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                60      60       0     0  100.0 %   98.3 %      464     3094
+    rover->base LoRa                60      60       0     0  100.0 %   98.3 %      464     3095
+
+  Point test at "car open 5m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 base->rover            20      20       0     0  100.0 %  100.0 %      462      466
+    1 SF9/17 rover->base            20      20       0     0  100.0 %   95.0 %      462     2430
+    2 SF9/22 base->rover            20      20       0     0  100.0 %  100.0 %      463      465
+    2 SF9/22 rover->base            20      20       0     0  100.0 %  100.0 %      462      465
+    3 SF12/22 base->rover           20      20       0     0  100.0 %   95.0 %     3091     9576
+    3 SF12/22 rover->base           20      20       0     0  100.0 %  100.0 %     3093     3105
+
+  By distance (250 m bands)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa 0-250 m                   120     120       0     0  100.0 %   98.3 %      464     3095
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -59 dBm (min -76), SNR median 10.8 dB (min 5.2)
+    rover->base            RSSI median -60 dBm (min -79), SNR median 10.8 dB (min 5.0)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 24 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 98.8 %, checking 1.2 %
+    rover DEA: up 100.0 % of 24 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 99.0 %, checking 1.0 %
+
+========================================================================
+Session 20261021-191750: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.1 (the boards' own setting: the plan's steps below)
+  files: base ML_20261021-191750_base_ABC.jsonl, rover ML_20261021-191750_rover_DEA.jsonl
+  base board ABC: stopped (done) after 60 messages
+  base board ABC: 161 packets heard over LoRa, 0 damaged (RXBAD)
+  base battery: 3950 -> 3940 mV (71 -> 71 %) over 24 min; noise floor -112 dBm
+  rover board DEA: stopped (done) after 60 messages
+  rover board DEA: 160 packets heard over LoRa, 1 damaged (RXBAD)
+  rover battery: 3775 -> 3768 mV (39 -> 37 %) over 24 min; noise floor -110 dBm
+  distance rover-base: median 114 m (min 113, max 117) - GPS based, +/- the fixes' accuracy
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                60      60       0     0  100.0 %   95.0 %      463     9406
+    rover->base LoRa                60      60       0     0  100.0 %   98.3 %      464     3094
+
+  Point test at "car inside 5m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 base->rover            20      20       0     0  100.0 %  100.0 %      462      464
+    1 SF9/17 rover->base            20      20       0     0  100.0 %  100.0 %      462      465
+    2 SF9/22 base->rover            20      20       0     0  100.0 %  100.0 %      462      469
+    2 SF9/22 rover->base            20      20       0     0  100.0 %  100.0 %      462      465
+    3 SF12/22 base->rover           20      20       0     0  100.0 %   85.0 %     3091    10446
+    3 SF12/22 rover->base           20      20       0     0  100.0 %   95.0 %     3092    16134
+
+  By distance (250 m bands)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa 0-250 m                   120     120       0     0  100.0 %   96.7 %      464     3094
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -57 dBm (min -63), SNR median 10.8 dB (min 4.5)
+    rover->base            RSSI median -56 dBm (min -69), SNR median 10.7 dB (min 5.0)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 25 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 95.2 %, checking 4.8 %
+    rover DEA: up 100.0 % of 25 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 95.2 %, checking 4.8 %
+
+========================================================================
+Session 20261021-200136: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.1 (the boards' own setting: the plan's steps below)
+  files: base ML_20261021-200136_base_ABC.jsonl, rover ML_20261021-200136_rover_DEA.jsonl
+  base board ABC: stopped (done) after 60 messages
+  base board ABC: 162 packets heard over LoRa, 0 damaged (RXBAD)
+  base battery: 3940 -> 3932 mV (70 -> 69 %) over 24 min; noise floor -116 dBm
+  rover board DEA: stopped (done) after 60 messages
+  rover board DEA: 162 packets heard over LoRa, 0 damaged (RXBAD)
+  rover battery: 3760 -> 3749 mV (37 -> 33 %) over 24 min; noise floor -115 dBm
+  distance rover-base: median 344 m (min 319, max 394) - GPS based, +/- the fixes' accuracy
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                60      60       0     0  100.0 %   98.3 %      464     3105
+    rover->base LoRa                60      60       0     0  100.0 %   98.3 %      463     3094
+
+  Point test at "glass door with aluminum frame closed 10m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 base->rover            20      20       0     0  100.0 %  100.0 %      463      478
+    1 SF9/17 rover->base            20      20       0     0  100.0 %  100.0 %      462      467
+    2 SF9/22 base->rover            20      20       0     0  100.0 %  100.0 %      462      467
+    2 SF9/22 rover->base            20      20       0     0  100.0 %  100.0 %      462      467
+    3 SF12/22 base->rover           20      20       0     0  100.0 %   95.0 %     3091    10017
+    3 SF12/22 rover->base           20      20       0     0  100.0 %   95.0 %     3092     9403
+
+  By distance (250 m bands)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa 250-500 m                 120     120       0     0  100.0 %   98.3 %      463     3094
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -68 dBm (min -74), SNR median 10.9 dB (min 5.2)
+    rover->base            RSSI median -68 dBm (min -75), SNR median 10.8 dB (min 5.0)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 25 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 99.0 %, checking 1.0 %
+      by the rover's labels: ?/? up 100 % of 25 min
+    rover DEA: up 100.0 % of 25 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 99.0 %, checking 1.0 %
+      by the rover's labels: ?/? up 100 % of 25 min
+
+========================================================================
+Session 20261021-202823: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.1 (the boards' own setting: the plan's steps below)
+  files: base ML_20261021-202823_base_ABC.jsonl, rover ML_20261021-202823_rover_DEA.jsonl
+  base board ABC: stopped (done) after 60 messages
+  base board ABC: 160 packets heard over LoRa, 0 damaged (RXBAD)
+  base battery: 3932 -> 3925 mV (69 -> 68 %) over 24 min; noise floor -116 dBm
+  rover board DEA: stopped (done) after 60 messages
+  rover board DEA: 161 packets heard over LoRa, 0 damaged (RXBAD)
+  rover battery: 3743 -> 3736 mV (30 -> 27 %) over 24 min; noise floor -115 dBm
+  distance rover-base: median 345 m (min 343, max 351) - GPS based, +/- the fixes' accuracy
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                60      60       0     0  100.0 %   98.3 %      463     3093
+    rover->base LoRa                60      60       0     0  100.0 %   96.7 %      463     3093
+
+  Point test at "glass door open 10m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 base->rover            20      20       0     0  100.0 %   95.0 %      462     2693
+    1 SF9/17 rover->base            20      20       0     0  100.0 %   95.0 %      461     2761
+    2 SF9/22 base->rover            20      20       0     0  100.0 %  100.0 %      462      465
+    2 SF9/22 rover->base            20      20       0     0  100.0 %  100.0 %      463      466
+    3 SF12/22 base->rover           20      20       0     0  100.0 %  100.0 %     3091     3094
+    3 SF12/22 rover->base           20      20       0     0  100.0 %   95.0 %     3091    10064
+
+  By distance (250 m bands)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa 250-500 m                 120     120       0     0  100.0 %   97.5 %      463     3093
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -55 dBm (min -57), SNR median 10.8 dB (min 4.8)
+    rover->base            RSSI median -55 dBm (min -57), SNR median 10.8 dB (min 3.8)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 25 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 98.9 %, checking 1.1 %
+    rover DEA: up 100.0 % of 25 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 98.8 %, checking 1.2 %
+
+========================================================================
+Session 20261021-220851: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.1 (the boards' own setting: the plan's steps below)
+  files: base ML_20261021-220851_base_ABC.jsonl, rover ML_20261021-220851_rover_DEA.jsonl
+  base board ABC: 0 packets heard over LoRa, 0 damaged (RXBAD)
+  rover board DEA: 0 packets heard over LoRa, 0 damaged (RXBAD)
+  rover battery: 3716 -> 3715 mV (21 -> 20 %) over 3 min; noise floor -110 dBm
+  distance rover-base: median 8 m (min 7, max 29) - GPS based, +/- the fixes' accuracy
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    rover->base LoRa                17       0      16     0    0.0 %    0.0 %        -        -
+
+  Point test at "throught concrete floor/ceiling 5m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 rover->base            17       0      16     0    0.0 %    0.0 %        -        -
+
+  By distance (250 m bands)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa 0-250 m                    17       0      16     0    0.0 %    0.0 %        -        -
+
+  Not delivered, why:
+    LoRa failed: no-receipt: 16
+    LoRa unknown: no result (session ended): 1
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    rover DEA: up 8.2 % of 4 min; lost 1 time(s), 4.0 min in all (longest 4.0 min)
+         0.4 -    4.3 min    4.0 min  no-receipt  (still lost at the end)
+      LoRa path states: lost 91.5 %, checking 8.5 %, connected 0.0 %
+
+========================================================================
+Session 20261021-221614: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.1 (the boards' own setting: the plan's steps below)
+  files: base ML_20261021-221614_base_ABC.jsonl, rover ML_20261021-221614_rover_DEA.jsonl
+  base board ABC: stopped (done) after 60 messages
+  base board ABC: 160 packets heard over LoRa, 0 damaged (RXBAD)
+  base battery: 3906 -> 3901 mV (67 -> 65 %) over 24 min; noise floor -107 dBm
+  rover board DEA: 52 packets heard over LoRa, 0 damaged (RXBAD)
+  rover battery: 3713 -> 3712 mV (20 -> 20 %) over 4 min; noise floor -106 dBm
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                60      60       0     0  100.0 %   96.7 %      463     3103
+    rover->base LoRa                20      20       0     0  100.0 %  100.0 %      462      464
+
+  Point test at "through concrete floor 5m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 base->rover            20      20       0     0  100.0 %  100.0 %      462      466
+    1 SF9/17 rover->base            20      20       0     0  100.0 %  100.0 %      462      464
+    2 SF9/22 base->rover            20      20       0     0  100.0 %  100.0 %      461      464
+    3 SF12/22 base->rover           20      20       0     0  100.0 %   90.0 %     3091     9164
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -66 dBm (min -74), SNR median 10.8 dB (min 10.0)
+    rover->base            RSSI median -67 dBm (min -78), SNR median 11.0 dB (min 10.2)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 25 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 99.0 %, checking 1.0 %
+    rover DEA: up 100.0 % of 5 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 98.8 %, checking 1.2 %
+
+========================================================================
+Session 20261021-231856: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.1 (the boards' own setting: the plan's steps below)
+  files: rover ML_20261021-231856_rover_ABC.jsonl
+  NOTE: only one phone's file - receive-side numbers (RSSI) are missing.
+  rover board ABC: stopped (done) after 60 messages
+  rover board ABC: 161 packets heard over LoRa, 0 damaged (RXBAD)
+  rover battery: 3892 -> 3883 mV (64 -> 62 %) over 24 min; noise floor -116 dBm
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    rover->base LoRa                60      60       0     0  100.0 %   95.0 %      464     8971
+
+  Point test at "through brick wall 5m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 rover->base            20      20       0     0  100.0 %  100.0 %      463      466
+    2 SF9/22 rover->base            20      20       0     0  100.0 %  100.0 %      462      467
+    3 SF12/22 rover->base           20      20       0     0  100.0 %   85.0 %     3091     9554
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    rover ABC: up 100.0 % of 25 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 99.0 %, checking 1.0 %
+
+========================================================================
+Session 20261022-163713: rundown-a test, paths both, SF12 (range level 4), tx 22 dBm, fw 0.6.1
+  files: base ML_20261022-163713_base_ABC.jsonl
+  NOTE: only one phone's file - receive-side numbers (RSSI) are missing.
+  base board ABC: 0 packets heard over LoRa, 0 damaged (RXBAD)
+
+  No test messages in this session.
+
+========================================================================
+Session 20261023-015858: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: base ML_20261023-015858_base_ABC.jsonl, rover ML_20261023-015858_rover_DEA.jsonl
+  base board ABC: stopped (done) after 30 messages
+  base board ABC: 84 packets heard over LoRa, 0 damaged (RXBAD)
+  base battery: 4130 -> 4121 mV (94 -> 94 %) over 12 min; noise floor -113 dBm
+  rover board DEA: stopped (done) after 30 messages
+  rover board DEA: 84 packets heard over LoRa, 0 damaged (RXBAD)
+  rover battery: 4118 -> 4087 mV (91 -> 90 %) over 12 min; noise floor -114 dBm
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                30      30       0     0  100.0 %   96.7 %      463     3092
+    rover->base LoRa                30      30       0     0  100.0 %  100.0 %      464     3095
+
+  Point test at "25m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 base->rover            10      10       0     0  100.0 %  100.0 %      463      466
+    1 SF9/17 rover->base            10      10       0     0  100.0 %  100.0 %      463      465
+    2 SF9/22 base->rover            10      10       0     0  100.0 %   90.0 %      463     2796
+    2 SF9/22 rover->base            10      10       0     0  100.0 %  100.0 %      464      466
+    3 SF12/22 base->rover           10      10       0     0  100.0 %  100.0 %     3091     3094
+    3 SF12/22 rover->base           10      10       0     0  100.0 %  100.0 %     3093     3095
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -72 dBm (min -87), SNR median 10.8 dB (min 5.5)
+    rover->base            RSSI median -71 dBm (min -89), SNR median 10.8 dB (min 6.2)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 14 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 98.5 %, checking 1.5 %
+    rover DEA: up 100.0 % of 14 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 97.9 %, checking 2.1 %
+
+========================================================================
+Session 20261023-022121: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: rover ML_20261023-022121_rover_DEA.jsonl
+  NOTE: only one phone's file - receive-side numbers (RSSI) are missing.
+  rover board DEA: stopped (app) after 2 messages
+  rover board DEA: 0 packets heard over LoRa, 0 damaged (RXBAD)
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    rover->base LoRa                 2       0       2     0    0.0 %    0.0 %        -        -
+
+  Point test at "60m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 rover->base             2       0       2     0    0.0 %    0.0 %        -        -
+
+  Not delivered, why:
+    LoRa failed: no-receipt: 2
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    rover DEA: up 55.6 % of 1 min; lost 1 time(s), 0.3 min in all (longest 0.3 min)
+         0.4 -    0.7 min    0.3 min  no-receipt  (still lost at the end)
+      LoRa path states: checking 55.6 %, lost 44.4 %, connected 0.0 %
+
+========================================================================
+Session 20261023-022332: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: rover ML_20261023-022332_rover_DEA.jsonl
+  NOTE: only one phone's file - receive-side numbers (RSSI) are missing.
+  rover board DEA: 1 packets heard over LoRa, 0 damaged (RXBAD)
+  rover battery: 4107 -> 4107 mV (90 -> 90 %) over 0 min; noise floor -104 dBm
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    rover->base LoRa                 6       0       5     0    0.0 %    0.0 %        -        -
+
+  Point test at "60m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 rover->base             6       0       5     0    0.0 %    0.0 %        -        -
+
+  Not delivered, why:
+    LoRa failed: no-receipt: 5
+    LoRa unknown: no result (session ended): 1
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    rover DEA: up 24.1 % of 2 min; lost 1 time(s), 1.2 min in all (longest 1.2 min)
+         0.4 -    1.5 min    1.2 min  no-receipt
+      LoRa path states: lost 70.8 %, checking 29.2 %, connected 0.0 %
+
+========================================================================
+Session 20261023-022636: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: rover ML_20261023-022636_rover_ABC.jsonl
+  NOTE: only one phone's file - receive-side numbers (RSSI) are missing.
+  rover board ABC: 0 packets heard over LoRa, 0 damaged (RXBAD)
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    rover->base LoRa                 2       0       1     0    0.0 %    0.0 %        -        -
+
+  Point test at "test": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 rover->base             2       0       1     0    0.0 %    0.0 %        -        -
+
+  Not delivered, why:
+    LoRa failed: no-receipt: 1
+    LoRa unknown: no result (session ended): 1
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    rover ABC: up 87.5 % of 0 min; lost 1 time(s), 0.1 min in all (longest 0.1 min)
+         0.4 -    0.4 min    0.1 min  no-receipt  (still lost at the end)
+      LoRa path states: checking 87.3 %, lost 12.5 %, connected 0.2 %
+
+========================================================================
+Session 20261023-023102: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: base ML_20261023-023102_base_ABC.jsonl, rover ML_20261023-023102_rover_DEA.jsonl
+  base board ABC: stopped (done) after 30 messages
+  base board ABC: 82 packets heard over LoRa, 0 damaged (RXBAD)
+  base battery: 4116 -> 4109 mV (92 -> 92 %) over 12 min; noise floor -115 dBm
+  rover board DEA: stopped (done) after 30 messages
+  rover board DEA: 84 packets heard over LoRa, 0 damaged (RXBAD)
+  rover battery: 4104 -> 4102 mV (90 -> 91 %) over 12 min; noise floor -113 dBm
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                30      30       0     0  100.0 %   96.7 %      463     3093
+    rover->base LoRa                30      30       0     0  100.0 %   96.7 %      464     3095
+
+  Point test at "60m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 base->rover            10      10       0     0  100.0 %  100.0 %      462      463
+    1 SF9/17 rover->base            10      10       0     0  100.0 %  100.0 %      462      476
+    2 SF9/22 base->rover            10      10       0     0  100.0 %  100.0 %      463      465
+    2 SF9/22 rover->base            10      10       0     0  100.0 %  100.0 %      462      464
+    3 SF12/22 base->rover           10      10       0     0  100.0 %   90.0 %     3092    10432
+    3 SF12/22 rover->base           10      10       0     0  100.0 %   90.0 %     3093     9457
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -78 dBm (min -83), SNR median 10.5 dB (min 5.0)
+    rover->base            RSSI median -80 dBm (min -103), SNR median 10.7 dB (min 4.2)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 14 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 97.7 %, checking 2.3 %
+    rover DEA: up 100.0 % of 14 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 98.1 %, checking 1.9 %
+
+========================================================================
+Session 20261023-024807: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: rover ML_20261023-024807_rover_DEA.jsonl
+  NOTE: only one phone's file - receive-side numbers (RSSI) are missing.
+  rover board DEA: 0 packets heard over LoRa, 0 damaged (RXBAD)
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    rover->base LoRa                 2       0       1     0    0.0 %    0.0 %        -        -
+
+  Point test at "100m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 rover->base             2       0       1     0    0.0 %    0.0 %        -        -
+
+  Not delivered, why:
+    LoRa failed: no-receipt: 1
+    LoRa unknown: no result (session ended): 1
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    rover DEA: up 75.4 % of 0 min; lost 1 time(s), 0.1 min in all (longest 0.1 min)
+         0.4 -    0.5 min    0.1 min  no-receipt  (still lost at the end)
+      LoRa path states: checking 83.6 %, lost 16.4 %, connected 0.0 %
+
+========================================================================
+Session 20261023-025036: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: rover ML_20261023-025036_rover_DEA.jsonl
+  NOTE: only one phone's file - receive-side numbers (RSSI) are missing.
+  rover board DEA: 0 packets heard over LoRa, 0 damaged (RXBAD)
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    rover->base LoRa                 2       0       1     0    0.0 %    0.0 %        -        -
+
+  Point test at "150m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 rover->base             2       0       1     0    0.0 %    0.0 %        -        -
+
+  Not delivered, why:
+    LoRa failed: no-receipt: 1
+    LoRa unknown: no result (session ended): 1
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    rover DEA: up 65.9 % of 1 min; lost 1 time(s), 0.2 min in all (longest 0.2 min)
+         0.4 -    0.6 min    0.2 min  no-receipt  (still lost at the end)
+      LoRa path states: checking 65.9 %, lost 34.1 %, connected 0.0 %
+
+========================================================================
+Session 20261023-025511: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: base ML_20261023-025511_base_ABC.jsonl, rover ML_20261023-025511_rover_DEA.jsonl
+  base board ABC: stopped (app) after 1 messages
+  base board ABC: 4 packets heard over LoRa, 0 damaged (RXBAD)
+  rover board DEA: stopped (app) after 1 messages
+  rover board DEA: 4 packets heard over LoRa, 0 damaged (RXBAD)
+  distance rover-base: median 56 m (min 56, max 57) - GPS based, +/- the fixes' accuracy
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                 1       1       0     0  100.0 %  100.0 %      461      461
+    rover->base LoRa                 1       1       0     0  100.0 %  100.0 %      464      464
+
+  Point test at "test": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 base->rover             1       1       0     0  100.0 %  100.0 %      461      461
+    1 SF9/17 rover->base             1       1       0     0  100.0 %  100.0 %      464      464
+
+  By distance (250 m bands)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa 0-250 m                     2       2       0     0  100.0 %  100.0 %      464      464
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -79 dBm (min -79), SNR median 11.2 dB (min 11.2)
+    rover->base            RSSI median -78 dBm (min -78), SNR median 11.2 dB (min 11.2)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 0 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 79.9 %, checking 20.1 %
+    rover DEA: up 100.0 % of 0 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 82.5 %, checking 17.5 %
+
+========================================================================
+Session 20261023-025558: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: base ML_20261023-025558_base_ABC.jsonl, rover ML_20261023-025558_rover_DEA.jsonl
+  base board ABC: stopped (done) after 30 messages
+  base board ABC: 84 packets heard over LoRa, 0 damaged (RXBAD)
+  base battery: 4108 -> 4104 mV (92 -> 89 %) over 12 min; noise floor -115 dBm
+  rover board DEA: stopped (done) after 30 messages
+  rover board DEA: 83 packets heard over LoRa, 0 damaged (RXBAD)
+  rover battery: 4099 -> 4096 mV (89 -> 88 %) over 12 min; noise floor -113 dBm
+  distance rover-base: median 59 m (min 58, max 61) - GPS based, +/- the fixes' accuracy
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                30      30       0     0  100.0 %   93.3 %      464     3095
+    rover->base LoRa                30      30       0     0  100.0 %   93.3 %      464     8614
+
+  Point test at "60m again": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 base->rover            10      10       0     0  100.0 %   90.0 %      464     2898
+    1 SF9/17 rover->base            10      10       0     0  100.0 %  100.0 %      463      464
+    2 SF9/22 base->rover            10      10       0     0  100.0 %  100.0 %      463      464
+    2 SF9/22 rover->base            10      10       0     0  100.0 %  100.0 %      463      465
+    3 SF12/22 base->rover           10      10       0     0  100.0 %   90.0 %     3091    10450
+    3 SF12/22 rover->base           10      10       0     0  100.0 %   80.0 %     3093     9563
+
+  By distance (250 m bands)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa 0-250 m                    60      60       0     0  100.0 %   93.3 %      464     8614
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -76 dBm (min -90), SNR median 10.8 dB (min 5.5)
+    rover->base            RSSI median -77 dBm (min -84), SNR median 10.8 dB (min 6.2)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 14 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 98.5 %, checking 1.5 %
+    rover DEA: up 100.0 % of 14 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 98.4 %, checking 1.6 %
+
+========================================================================
+Session 20261023-031128: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: base ML_20261023-031128_base_ABC.jsonl, rover ML_20261023-031128_rover_DEA.jsonl
+  base board ABC: stopped (done) after 30 messages
+  base board ABC: 84 packets heard over LoRa, 0 damaged (RXBAD)
+  base battery: 4102 -> 4095 mV (89 -> 88 %) over 12 min; noise floor -115 dBm
+  rover board DEA: stopped (done) after 30 messages
+  rover board DEA: 84 packets heard over LoRa, 2 damaged (RXBAD)
+  rover battery: 4091 -> 4093 mV (88 -> 88 %) over 12 min; noise floor -113 dBm
+  distance rover-base: median 145 m (min 144, max 146) - GPS based, +/- the fixes' accuracy
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                30      30       0     0  100.0 %  100.0 %      464     3093
+    rover->base LoRa                30      30       0     0  100.0 %   93.3 %      464     3096
+
+  Point test at "150m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 base->rover            10      10       0     0  100.0 %  100.0 %      462      465
+    1 SF9/17 rover->base            10      10       0     0  100.0 %  100.0 %      461      465
+    2 SF9/22 base->rover            10      10       0     0  100.0 %  100.0 %      462      464
+    2 SF9/22 rover->base            10      10       0     0  100.0 %   90.0 %      464     2809
+    3 SF12/22 base->rover           10      10       0     0  100.0 %  100.0 %     3092     3094
+    3 SF12/22 rover->base           10      10       0     0  100.0 %   90.0 %     3092     8792
+
+  By distance (250 m bands)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa 0-250 m                    60      60       0     0  100.0 %   96.7 %      464     3096
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -97 dBm (min -111), SNR median 6.8 dB (min -1.8)
+    rover->base            RSSI median -97 dBm (min -108), SNR median 8.3 dB (min 4.2)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 14 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 98.0 %, checking 2.0 %
+    rover DEA: up 100.0 % of 14 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 98.1 %, checking 1.9 %
+
+========================================================================
+Session 20261023-032704: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: base ML_20261023-032704_base_ABC.jsonl, rover ML_20261023-032704_rover_DEA.jsonl
+  base board ABC: stopped (app) after 0 messages
+  base board ABC: 3 packets heard over LoRa, 0 damaged (RXBAD)
+  rover board DEA: stopped (app) after 1 messages
+  rover board DEA: 3 packets heard over LoRa, 0 damaged (RXBAD)
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    rover->base LoRa                 1       1       0     0  100.0 %  100.0 %      462      462
+
+  Point test at "t": plan SF9/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/22 rover->base             1       1       0     0  100.0 %  100.0 %      462      462
+
+  LoRa signal at the receiver:
+    rover->base            RSSI median -102 dBm (min -102), SNR median 8.8 dB (min 8.8)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 0 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 55.6 %, checking 44.4 %
+    rover DEA: up 100.0 % of 0 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: checking 69.4 %, connected 30.6 %
+
+========================================================================
+Session 20261023-032839: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: base ML_20261023-032839_base_ABC.jsonl, rover ML_20261023-032839_rover_DEA.jsonl
+  base board ABC: stopped (app) after 0 messages
+  base board ABC: 3 packets heard over LoRa, 1 damaged (RXBAD)
+  rover board DEA: stopped (app) after 1 messages
+  rover board DEA: 3 packets heard over LoRa, 0 damaged (RXBAD)
+  distance rover-base: median 296 m (min 296, max 296) - GPS based, +/- the fixes' accuracy
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    rover->base LoRa                 1       1       0     0  100.0 %    0.0 %     2494     2494
+
+  Point test at "t": plan SF9/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/22 rover->base             1       1       0     0  100.0 %    0.0 %     2494     2494
+
+  By distance (250 m bands)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa 250-500 m                   1       1       0     0  100.0 %    0.0 %     2494     2494
+
+  LoRa signal at the receiver:
+    rover->base            RSSI median -87 dBm (min -87), SNR median 11.0 dB (min 11.0)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 0 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 80.3 %, checking 19.7 %
+    rover DEA: up 100.0 % of 0 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 66.1 %, checking 33.9 %
+
+========================================================================
+Session 20261023-033035: point test, paths lora, SF12 (range level 4), tx 22 dBm, fw 0.6.2 (the boards' own setting: the plan's steps below)
+  files: base ML_20261023-033035_base_ABC.jsonl, rover ML_20261023-033035_rover_DEA.jsonl
+  base board ABC: stopped (done) after 30 messages
+  base board ABC: 82 packets heard over LoRa, 1 damaged (RXBAD)
+  base battery: 4097 -> 4093 mV (88 -> 88 %) over 12 min; noise floor -115 dBm
+  rover board DEA: stopped (done) after 30 messages
+  rover board DEA: 83 packets heard over LoRa, 0 damaged (RXBAD)
+  rover battery: 4088 -> 4088 mV (88 -> 88 %) over 12 min; noise floor -114 dBm
+  distance rover-base: median 406 m (min 397, max 409) - GPS based, +/- the fixes' accuracy
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                30      30       0     0  100.0 %   93.3 %      464     8825
+    rover->base LoRa                30      30       0     0  100.0 %  100.0 %      464     3093
+
+  Point test at "400m": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 base->rover            10      10       0     0  100.0 %  100.0 %      462      464
+    1 SF9/17 rover->base            10      10       0     0  100.0 %  100.0 %      463      466
+    2 SF9/22 base->rover            10      10       0     0  100.0 %  100.0 %      462      464
+    2 SF9/22 rover->base            10      10       0     0  100.0 %  100.0 %      462      465
+    3 SF12/22 base->rover           10      10       0     0  100.0 %   80.0 %     3093    10429
+    3 SF12/22 rover->base           10      10       0     0  100.0 %  100.0 %     3092     3109
+
+  By distance (250 m bands)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa 250-500 m                  60      60       0     0  100.0 %   96.7 %      464     3109
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -105 dBm (min -113), SNR median 3.9 dB (min -7.0)
+    rover->base            RSSI median -107 dBm (min -114), SNR median 3.8 dB (min -2.5)
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 14 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 98.0 %, checking 2.0 %
+    rover DEA: up 100.0 % of 13 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 97.7 %, checking 2.3 %
+
+========================================================================
+Point tests (v0.6.1), per step and direction. rate = delivered / (delivered + failed); RSSI / SNR as
+the receiver heard the sender in that step (all its packets); margin = median SNR - the SF's limit
+    label                      step setting     dir          sent deliv    rate     1st  RSSI med/min  SNR med/min  margin    n
+    car open 5m                   1 SF9/17      base->rover    20    20 100.0 % 100.0 %     -59.0/-75    10.8/10.2    23.3   52
+    car open 5m                   1 SF9/17      rover->base    20    20 100.0 %  95.0 %       -60/-79     10.8/9.8    23.3   53
+    car open 5m                   2 SF9/22      base->rover    20    20 100.0 % 100.0 %       -61/-93     10.8/8.5    23.3   53
+    car open 5m                   2 SF9/22      rover->base    20    20 100.0 % 100.0 %       -59/-77    11.0/10.2    23.5   53
+    car open 5m                   3 SF12/22     base->rover    20    20 100.0 %  95.0 %     -58.5/-78      6.5/4.8    26.5   56
+    car open 5m                   3 SF12/22     rover->base    20    20 100.0 % 100.0 %       -56/-75      6.2/5.0    26.2   55
+    car inside 5m                 1 SF9/17      base->rover    20    20 100.0 % 100.0 %       -57/-69    10.8/10.0    23.3   53
+    car inside 5m                 1 SF9/17      rover->base    20    20 100.0 % 100.0 %       -55/-69    10.8/10.2    23.3   53
+    car inside 5m                 2 SF9/22      base->rover    20    20 100.0 % 100.0 %       -56/-69    10.8/10.2    23.3   53
+    car inside 5m                 2 SF9/22      rover->base    20    20 100.0 % 100.0 %       -57/-68     10.8/9.8    23.3   53
+    car inside 5m                 3 SF12/22     base->rover    20    20 100.0 %  85.0 %     -57.0/-63      6.8/4.5    26.8   54
+    car inside 5m                 3 SF12/22     rover->base    20    20 100.0 %  95.0 %     -56.0/-63      6.2/5.0    26.2   54
+    glass door with aluminum      1 SF9/17      base->rover    20    20 100.0 % 100.0 %       -67/-72    11.0/10.0    23.5   53
+    glass door with aluminum      1 SF9/17      rover->base    20    20 100.0 % 100.0 %       -68/-73    11.0/10.5    23.5   53
+    glass door with aluminum      2 SF9/22      base->rover    20    20 100.0 % 100.0 %       -68/-70    11.0/10.2    23.5   53
+    glass door with aluminum      2 SF9/22      rover->base    20    20 100.0 % 100.0 %       -68/-71    11.0/10.0    23.5   53
+    glass door with aluminum      3 SF12/22     base->rover    20    20 100.0 %  95.0 %     -68.0/-74      6.2/4.5    26.2   56
+    glass door with aluminum      3 SF12/22     rover->base    20    20 100.0 %  95.0 %     -68.0/-75      6.2/4.8    26.2   56
+    glass door open 10m           1 SF9/17      base->rover    20    20 100.0 %  95.0 %       -56/-57    11.0/10.0    23.5   53
+    glass door open 10m           1 SF9/17      rover->base    20    20 100.0 %  95.0 %     -55.0/-56    11.0/10.2    23.5   52
+    glass door open 10m           2 SF9/22      base->rover    20    20 100.0 % 100.0 %       -55/-57    10.5/10.0    23.0   53
+    glass door open 10m           2 SF9/22      rover->base    20    20 100.0 % 100.0 %       -54/-56    11.0/10.5    23.5   53
+    glass door open 10m           3 SF12/22     base->rover    20    20 100.0 % 100.0 %       -55/-57      6.2/4.8    26.2   55
+    glass door open 10m           3 SF12/22     rover->base    20    20 100.0 %  95.0 %       -54/-57      6.2/3.8    26.2   55
+    throught concrete floor/c     1 SF9/17      base->rover     0     0       -       -             -            -            0
+    throught concrete floor/c     1 SF9/17      rover->base    17     0   0.0 %   0.0 %             -            -            0
+    throught concrete floor/c     2 SF9/22      base->rover     0     0       -       -             -            -            0
+    throught concrete floor/c     2 SF9/22      rover->base     0     0       -       -             -            -            0
+    throught concrete floor/c     3 SF12/22     base->rover     0     0       -       -             -            -            0
+    throught concrete floor/c     3 SF12/22     rover->base     0     0       -       -             -            -            0
+    through concrete floor 5m     1 SF9/17      base->rover    20    20 100.0 % 100.0 %     -66.0/-77    10.8/10.0    23.3   52
+    through concrete floor 5m     1 SF9/17      rover->base    20    20 100.0 % 100.0 %       -66/-78    10.8/10.0    23.3   53
+    through concrete floor 5m     2 SF9/22      base->rover    20    20 100.0 % 100.0 %             -            -            0
+    through concrete floor 5m     2 SF9/22      rover->base     0     0       -       -       -61/-78     11.0/9.8    23.5   53
+    through concrete floor 5m     3 SF12/22     base->rover    20    20 100.0 %  90.0 %             -            -            0
+    through concrete floor 5m     3 SF12/22     rover->base     0     0       -       -     -71.0/-99     6.5/-3.0    26.5   54
+    through brick wall 5m         1 SF9/17      base->rover          20       -       -       -67/-90    11.2/10.2    23.7   53
+    through brick wall 5m         1 SF9/17      rover->base    20    20 100.0 % 100.0 %             -            -            0
+    through brick wall 5m         2 SF9/22      base->rover          20       -       -       -60/-70     11.2/9.8    23.7   53
+    through brick wall 5m         2 SF9/22      rover->base    20    20 100.0 % 100.0 %             -            -            0
+    through brick wall 5m         3 SF12/22     base->rover          20       -       -       -66/-69      6.8/5.0    26.8   55
+    through brick wall 5m         3 SF12/22     rover->base    20    20 100.0 %  85.0 %             -            -            0
+    25m                           1 SF9/17      base->rover    10    10 100.0 % 100.0 %     -73.0/-91     10.8/9.0    23.3   28
+    25m                           1 SF9/17      rover->base    10    10 100.0 % 100.0 %      -69/-104     11.0/8.5    23.5   27
+    25m                           2 SF9/22      base->rover    10    10 100.0 %  90.0 %       -70/-86    10.8/10.2    23.3   27
+    25m                           2 SF9/22      rover->base    10    10 100.0 % 100.0 %     -69.0/-89    11.0/10.5    23.5   28
+    25m                           3 SF12/22     base->rover    10    10 100.0 % 100.0 %       -75/-87      6.8/5.0    26.8   29
+    25m                           3 SF12/22     rover->base    10    10 100.0 % 100.0 %       -77/-89      6.5/5.2    26.5   29
+    60m                           1 SF9/17      base->rover           0       -       -             -            -            0
+    60m                           1 SF9/17      rover->base     2     0   0.0 %   0.0 %             -            -            0
+    60m                           2 SF9/22      base->rover           0       -       -             -            -            0
+    60m                           2 SF9/22      rover->base     0     0       -       -             -            -            0
+    60m                           3 SF12/22     base->rover           0       -       -             -            -            0
+    60m                           3 SF12/22     rover->base     0     0       -       -             -            -            0
+    60m                           1 SF9/17      base->rover           0       -       -             -            -            0
+    60m                           1 SF9/17      rover->base     6     0   0.0 %   0.0 %             -            -            0
+    60m                           2 SF9/22      base->rover           0       -       -             -            -            0
+    60m                           2 SF9/22      rover->base     0     0       -       -             -            -            0
+    60m                           3 SF12/22     base->rover           0       -       -             -            -            0
+    60m                           3 SF12/22     rover->base     0     0       -       -             -            -            0
+    test                          1 SF9/17      base->rover           0       -       -             -            -            0
+    test                          1 SF9/17      rover->base     2     0   0.0 %   0.0 %             -            -            0
+    test                          2 SF9/22      base->rover           0       -       -             -            -            0
+    test                          2 SF9/22      rover->base     0     0       -       -             -            -            0
+    test                          3 SF12/22     base->rover           0       -       -             -            -            0
+    test                          3 SF12/22     rover->base     0     0       -       -             -            -            0
+    60m                           1 SF9/17      base->rover    10    10 100.0 % 100.0 %      -78/-102     10.8/6.5    23.3   27
+    60m                           1 SF9/17      rover->base    10    10 100.0 % 100.0 %    -80.0/-103     11.2/7.2    23.7   26
+    60m                           2 SF9/22      base->rover    10    10 100.0 % 100.0 %     -78.0/-84     10.8/9.5    23.3   28
+    60m                           2 SF9/22      rover->base    10    10 100.0 % 100.0 %       -78/-95     10.8/6.2    23.3   27
+    60m                           3 SF12/22     base->rover    10    10 100.0 %  90.0 %       -80/-85      6.5/4.5    26.5   29
+    60m                           3 SF12/22     rover->base    10    10 100.0 %  90.0 %       -80/-93      6.5/4.2    26.5   29
+    100m                          1 SF9/17      base->rover           0       -       -             -            -            0
+    100m                          1 SF9/17      rover->base     2     0   0.0 %   0.0 %             -            -            0
+    100m                          2 SF9/22      base->rover           0       -       -             -            -            0
+    100m                          2 SF9/22      rover->base     0     0       -       -             -            -            0
+    100m                          3 SF12/22     base->rover           0       -       -             -            -            0
+    100m                          3 SF12/22     rover->base     0     0       -       -             -            -            0
+    150m                          1 SF9/17      base->rover           0       -       -             -            -            0
+    150m                          1 SF9/17      rover->base     2     0   0.0 %   0.0 %             -            -            0
+    150m                          2 SF9/22      base->rover           0       -       -             -            -            0
+    150m                          2 SF9/22      rover->base     0     0       -       -             -            -            0
+    150m                          3 SF12/22     base->rover           0       -       -             -            -            0
+    150m                          3 SF12/22     rover->base     0     0       -       -             -            -            0
+    test                          1 SF9/17      base->rover     1     1 100.0 % 100.0 %     -76.5/-79    10.7/10.0    23.1    4
+    test                          1 SF9/17      rover->base     1     1 100.0 % 100.0 %     -79.5/-82    11.1/10.2    23.6    4
+    test                          2 SF9/22      base->rover     0     0       -       -             -            -            0
+    test                          2 SF9/22      rover->base     0     0       -       -             -            -            0
+    test                          3 SF12/22     base->rover     0     0       -       -             -            -            0
+    test                          3 SF12/22     rover->base     0     0       -       -             -            -            0
+    60m again                     1 SF9/17      base->rover    10    10 100.0 %  90.0 %       -75/-88    10.8/10.2    23.3   27
+    60m again                     1 SF9/17      rover->base    10    10 100.0 % 100.0 %       -78/-83    11.0/10.2    23.5   27
+    60m again                     2 SF9/22      base->rover    10    10 100.0 % 100.0 %     -75.0/-81     10.7/9.8    23.1   28
+    60m again                     2 SF9/22      rover->base    10    10 100.0 % 100.0 %       -76/-81    10.8/10.5    23.3   27
+    60m again                     3 SF12/22     base->rover    10    10 100.0 %  90.0 %     -77.0/-90      6.2/5.5    26.2   28
+    60m again                     3 SF12/22     rover->base    10    10 100.0 %  80.0 %     -76.5/-84      6.5/5.0    26.5   30
+    150m                          1 SF9/17      base->rover    10    10 100.0 % 100.0 %      -98/-103      8.5/6.2    21.0   27
+    150m                          1 SF9/17      rover->base    10    10 100.0 % 100.0 %   -101.0/-106      8.5/6.8    21.0   28
+    150m                          2 SF9/22      base->rover    10    10 100.0 % 100.0 %      -98/-111     9.0/-1.8    21.5   27
+    150m                          2 SF9/22      rover->base    10    10 100.0 %  90.0 %      -98/-108      9.5/4.2    22.0   27
+    150m                          3 SF12/22     base->rover    10    10 100.0 % 100.0 %    -91.5/-104      6.0/3.0    26.0   30
+    150m                          3 SF12/22     rover->base    10    10 100.0 %  90.0 %      -92/-100      6.5/4.8    26.5   29
+    t                             1 SF9/22      base->rover     0     0       -       -     -103/-105     0.5/-0.8    13.0    3
+    t                             1 SF9/22      rover->base     1     1 100.0 % 100.0 %      -99/-102      9.2/8.8    21.7    3
+    t                             1 SF9/22      base->rover     0     0       -       -       -89/-92      9.8/8.8    22.3    3
+    t                             1 SF9/22      rover->base     1     1 100.0 %   0.0 %       -91/-93    11.0/10.0    23.5    3
+    400m                          1 SF9/17      base->rover    10    10 100.0 % 100.0 %     -108/-114    1.8/-12.2    14.3   27
+    400m                          1 SF9/17      rover->base    10    10 100.0 % 100.0 %     -110/-114     1.5/-4.2    14.0   27
+    400m                          2 SF9/22      base->rover    10    10 100.0 % 100.0 %     -106/-114     4.0/-8.5    16.5   27
+    400m                          2 SF9/22      rover->base    10    10 100.0 % 100.0 %   -106.0/-113     5.3/-2.5    17.9   26
+    400m                          3 SF12/22     base->rover    10    10 100.0 %  80.0 %     -102/-111     4.5/-1.5    24.5   29
+    400m                          3 SF12/22     rover->base    10    10 100.0 % 100.0 %     -101/-114    5.0/-11.2    25.0   29
+    (the two boards switched within 2.7 s of each other, by the phones' clocks; each step's settle time is 10-20 s)
+
+  Distance ladder (RSSI = A - 10 n log10(d); n, the path-loss exponent: 2 in free space, about 2.7-3.5 in town):
+    SF9/17 dBm base->rover: n = -1.00, A (1 m) = -66 dBm, R^2 = 1.00  (5 m -59.0, 10 m -56)
+    SF9/17 dBm rover->base: n = -1.66, A (1 m) = -72 dBm, R^2 = 1.00  (5 m -60, 10 m -55.0)
+    SF9/22 dBm base->rover: n = -1.99, A (1 m) = -75 dBm, R^2 = 1.00  (5 m -61, 10 m -55)
+    SF9/22 dBm rover->base: n = -1.66, A (1 m) = -71 dBm, R^2 = 1.00  (5 m -59, 10 m -54)
+    SF12/22 dBm base->rover: n = -1.16, A (1 m) = -67 dBm, R^2 = 1.00  (5 m -58.5, 10 m -55)
+    SF12/22 dBm rover->base: n = -0.66, A (1 m) = -61 dBm, R^2 = 1.00  (5 m -56, 10 m -54)
+

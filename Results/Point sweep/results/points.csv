@@ -1,0 +1,113 @@
+session,label,step,sf,dbm,from_role,from,to,sent,delivered,failed,skipped,rate_pct,first_try_pct,rtt_median_ms,packets_heard,rssi_median,rssi_min,snr_median,snr_min,margin_db,distance_m,distance_from,skew_ms,source
+20261021-185110,car open 5m,1,9,17,rover,DEA,ABC,20,20,0,0,100.0,95.0,462,53,-60,-79,10.8,9.8,23.3,5.0,label,974,both phones
+20261021-185110,car open 5m,2,9,22,rover,DEA,ABC,20,20,0,0,100.0,100.0,462,53,-59,-77,11.0,10.2,23.5,5.0,label,894,both phones
+20261021-185110,car open 5m,3,12,22,rover,DEA,ABC,20,20,0,0,100.0,100.0,3093,55,-56,-75,6.2,5.0,26.2,5.0,label,989,both phones
+20261021-185110,car open 5m,1,9,17,base,ABC,DEA,20,20,0,0,100.0,100.0,462,52,-59.0,-75,10.8,10.2,23.3,5.0,label,-974,both phones
+20261021-185110,car open 5m,2,9,22,base,ABC,DEA,20,20,0,0,100.0,100.0,463,53,-61,-93,10.8,8.5,23.3,5.0,label,-894,both phones
+20261021-185110,car open 5m,3,12,22,base,ABC,DEA,20,20,0,0,100.0,95.0,3091,56,-58.5,-78,6.5,4.8,26.5,5.0,label,-989,both phones
+20261021-191750,car inside 5m,1,9,17,rover,DEA,ABC,20,20,0,0,100.0,100.0,462,53,-55,-69,10.8,10.2,23.3,5.0,label,1167,both phones
+20261021-191750,car inside 5m,2,9,22,rover,DEA,ABC,20,20,0,0,100.0,100.0,462,53,-57,-68,10.8,9.8,23.3,5.0,label,1165,both phones
+20261021-191750,car inside 5m,3,12,22,rover,DEA,ABC,20,20,0,0,100.0,95.0,3092,54,-56.0,-63,6.2,5.0,26.2,5.0,label,1246,both phones
+20261021-191750,car inside 5m,1,9,17,base,ABC,DEA,20,20,0,0,100.0,100.0,462,53,-57,-69,10.8,10.0,23.3,5.0,label,-1167,both phones
+20261021-191750,car inside 5m,2,9,22,base,ABC,DEA,20,20,0,0,100.0,100.0,462,53,-56,-69,10.8,10.2,23.3,5.0,label,-1165,both phones
+20261021-191750,car inside 5m,3,12,22,base,ABC,DEA,20,20,0,0,100.0,85.0,3091,54,-57.0,-63,6.8,4.5,26.8,5.0,label,-1246,both phones
+20261021-200136,glass door with aluminum frame closed 10m,1,9,17,rover,DEA,ABC,20,20,0,0,100.0,100.0,462,53,-68,-73,11.0,10.5,23.5,10.0,label,1404,both phones
+20261021-200136,glass door with aluminum frame closed 10m,2,9,22,rover,DEA,ABC,20,20,0,0,100.0,100.0,462,53,-68,-71,11.0,10.0,23.5,10.0,label,1607,both phones
+20261021-200136,glass door with aluminum frame closed 10m,3,12,22,rover,DEA,ABC,20,20,0,0,100.0,95.0,3092,56,-68.0,-75,6.2,4.8,26.2,10.0,label,1532,both phones
+20261021-200136,glass door with aluminum frame closed 10m,1,9,17,base,ABC,DEA,20,20,0,0,100.0,100.0,463,53,-67,-72,11.0,10.0,23.5,10.0,label,-1404,both phones
+20261021-200136,glass door with aluminum frame closed 10m,2,9,22,base,ABC,DEA,20,20,0,0,100.0,100.0,462,53,-68,-70,11.0,10.2,23.5,10.0,label,-1607,both phones
+20261021-200136,glass door with aluminum frame closed 10m,3,12,22,base,ABC,DEA,20,20,0,0,100.0,95.0,3091,56,-68.0,-74,6.2,4.5,26.2,10.0,label,-1532,both phones
+20261021-202823,glass door open 10m,1,9,17,rover,DEA,ABC,20,20,0,0,100.0,95.0,461,52,-55.0,-56,11.0,10.2,23.5,10.0,label,1223,both phones
+20261021-202823,glass door open 10m,2,9,22,rover,DEA,ABC,20,20,0,0,100.0,100.0,463,53,-54,-56,11.0,10.5,23.5,10.0,label,1227,both phones
+20261021-202823,glass door open 10m,3,12,22,rover,DEA,ABC,20,20,0,0,100.0,95.0,3091,55,-54,-57,6.2,3.8,26.2,10.0,label,1158,both phones
+20261021-202823,glass door open 10m,1,9,17,base,ABC,DEA,20,20,0,0,100.0,95.0,462,53,-56,-57,11.0,10.0,23.5,10.0,label,-1223,both phones
+20261021-202823,glass door open 10m,2,9,22,base,ABC,DEA,20,20,0,0,100.0,100.0,462,53,-55,-57,10.5,10.0,23.0,10.0,label,-1227,both phones
+20261021-202823,glass door open 10m,3,12,22,base,ABC,DEA,20,20,0,0,100.0,100.0,3091,55,-55,-57,6.2,4.8,26.2,10.0,label,-1158,both phones
+20261021-220851,throught concrete floor/ceiling 5m,1,9,17,rover,DEA,ABC,17,0,16,0,0.0,0.0,-,0,,,,,,5.0,label,,both phones
+20261021-220851,throught concrete floor/ceiling 5m,2,9,22,rover,DEA,ABC,0,0,0,0,,,-,0,,,,,,5.0,label,,both phones
+20261021-220851,throught concrete floor/ceiling 5m,3,12,22,rover,DEA,ABC,0,0,0,0,,,-,0,,,,,,5.0,label,,both phones
+20261021-220851,throught concrete floor/ceiling 5m,1,9,17,base,ABC,DEA,0,0,0,0,,,-,0,,,,,,5.0,label,,both phones
+20261021-220851,throught concrete floor/ceiling 5m,2,9,22,base,ABC,DEA,0,0,0,0,,,-,0,,,,,,5.0,label,,both phones
+20261021-220851,throught concrete floor/ceiling 5m,3,12,22,base,ABC,DEA,0,0,0,0,,,-,0,,,,,,5.0,label,,both phones
+20261021-221614,through concrete floor 5m,1,9,17,rover,DEA,ABC,20,20,0,0,100.0,100.0,462,53,-66,-78,10.8,10.0,23.3,5.0,label,1578,both phones
+20261021-221614,through concrete floor 5m,2,9,22,rover,DEA,ABC,0,0,0,0,,,-,53,-61,-78,11.0,9.8,23.5,5.0,label,,both phones
+20261021-221614,through concrete floor 5m,3,12,22,rover,DEA,ABC,0,0,0,0,,,-,54,-71.0,-99,6.5,-3.0,26.5,5.0,label,,both phones
+20261021-221614,through concrete floor 5m,1,9,17,base,ABC,DEA,20,20,0,0,100.0,100.0,462,52,-66.0,-77,10.8,10.0,23.3,5.0,label,-1578,both phones
+20261021-221614,through concrete floor 5m,2,9,22,base,ABC,DEA,20,20,0,0,100.0,100.0,461,0,,,,,,5.0,label,,both phones
+20261021-221614,through concrete floor 5m,3,12,22,base,ABC,DEA,20,20,0,0,100.0,90.0,3091,0,,,,,,5.0,label,,both phones
+20261021-231856,through brick wall 5m,1,9,17,rover,ABC,DEA,20,20,0,0,100.0,100.0,463,0,,,,,,5.0,label,,sender's phone only
+20261021-231856,through brick wall 5m,2,9,22,rover,ABC,DEA,20,20,0,0,100.0,100.0,462,0,,,,,,5.0,label,,sender's phone only
+20261021-231856,through brick wall 5m,3,12,22,rover,ABC,DEA,20,20,0,0,100.0,85.0,3091,0,,,,,,5.0,label,,sender's phone only
+20261021-231856,through brick wall 5m,1,9,17,base,DEA,ABC,,20,,,,,,53,-67,-90,11.2,10.2,23.7,5.0,label,,receiver's phone only
+20261021-231856,through brick wall 5m,2,9,22,base,DEA,ABC,,20,,,,,,53,-60,-70,11.2,9.8,23.7,5.0,label,,receiver's phone only
+20261021-231856,through brick wall 5m,3,12,22,base,DEA,ABC,,20,,,,,,55,-66,-69,6.8,5.0,26.8,5.0,label,,receiver's phone only
+20261023-015858,25m,1,9,17,rover,DEA,ABC,10,10,0,0,100.0,100.0,463,27,-69,-104,11.0,8.5,23.5,25.0,label,809,both phones
+20261023-015858,25m,2,9,22,rover,DEA,ABC,10,10,0,0,100.0,100.0,464,28,-69.0,-89,11.0,10.5,23.5,25.0,label,957,both phones
+20261023-015858,25m,3,12,22,rover,DEA,ABC,10,10,0,0,100.0,100.0,3093,29,-77,-89,6.5,5.2,26.5,25.0,label,974,both phones
+20261023-015858,25m,1,9,17,base,ABC,DEA,10,10,0,0,100.0,100.0,463,28,-73.0,-91,10.8,9.0,23.3,25.0,label,-809,both phones
+20261023-015858,25m,2,9,22,base,ABC,DEA,10,10,0,0,100.0,90.0,463,27,-70,-86,10.8,10.2,23.3,25.0,label,-957,both phones
+20261023-015858,25m,3,12,22,base,ABC,DEA,10,10,0,0,100.0,100.0,3091,29,-75,-87,6.8,5.0,26.8,25.0,label,-974,both phones
+20261023-022121,60m,1,9,17,rover,DEA,ABC,2,0,2,0,0.0,0.0,-,0,,,,,,60.0,label,,sender's phone only
+20261023-022121,60m,2,9,22,rover,DEA,ABC,0,0,0,0,,,-,0,,,,,,60.0,label,,sender's phone only
+20261023-022121,60m,3,12,22,rover,DEA,ABC,0,0,0,0,,,-,0,,,,,,60.0,label,,sender's phone only
+20261023-022121,60m,1,9,17,base,ABC,DEA,,0,,,,,,0,,,,,,60.0,label,,receiver's phone only
+20261023-022121,60m,2,9,22,base,ABC,DEA,,0,,,,,,0,,,,,,60.0,label,,receiver's phone only
+20261023-022121,60m,3,12,22,base,ABC,DEA,,0,,,,,,0,,,,,,60.0,label,,receiver's phone only
+20261023-022332,60m,1,9,17,rover,DEA,ABC,6,0,5,0,0.0,0.0,-,0,,,,,,60.0,label,,sender's phone only
+20261023-022332,60m,2,9,22,rover,DEA,ABC,0,0,0,0,,,-,0,,,,,,60.0,label,,sender's phone only
+20261023-022332,60m,3,12,22,rover,DEA,ABC,0,0,0,0,,,-,0,,,,,,60.0,label,,sender's phone only
+20261023-022332,60m,1,9,17,base,ABC,DEA,,0,,,,,,0,,,,,,60.0,label,,receiver's phone only
+20261023-022332,60m,2,9,22,base,ABC,DEA,,0,,,,,,0,,,,,,60.0,label,,receiver's phone only
+20261023-022332,60m,3,12,22,base,ABC,DEA,,0,,,,,,0,,,,,,60.0,label,,receiver's phone only
+20261023-022636,test,1,9,17,rover,ABC,DEA,2,0,1,0,0.0,0.0,-,0,,,,,,,,,sender's phone only
+20261023-022636,test,2,9,22,rover,ABC,DEA,0,0,0,0,,,-,0,,,,,,,,,sender's phone only
+20261023-022636,test,3,12,22,rover,ABC,DEA,0,0,0,0,,,-,0,,,,,,,,,sender's phone only
+20261023-022636,test,1,9,17,base,DEA,ABC,,0,,,,,,0,,,,,,,,,receiver's phone only
+20261023-022636,test,2,9,22,base,DEA,ABC,,0,,,,,,0,,,,,,,,,receiver's phone only
+20261023-022636,test,3,12,22,base,DEA,ABC,,0,,,,,,0,,,,,,,,,receiver's phone only
+20261023-023102,60m,1,9,17,rover,DEA,ABC,10,10,0,0,100.0,100.0,462,26,-80.0,-103,11.2,7.2,23.7,60.0,label,863,both phones
+20261023-023102,60m,2,9,22,rover,DEA,ABC,10,10,0,0,100.0,100.0,462,27,-78,-95,10.8,6.2,23.3,60.0,label,759,both phones
+20261023-023102,60m,3,12,22,rover,DEA,ABC,10,10,0,0,100.0,90.0,3093,29,-80,-93,6.5,4.2,26.5,60.0,label,1052,both phones
+20261023-023102,60m,1,9,17,base,ABC,DEA,10,10,0,0,100.0,100.0,462,27,-78,-102,10.8,6.5,23.3,60.0,label,-863,both phones
+20261023-023102,60m,2,9,22,base,ABC,DEA,10,10,0,0,100.0,100.0,463,28,-78.0,-84,10.8,9.5,23.3,60.0,label,-759,both phones
+20261023-023102,60m,3,12,22,base,ABC,DEA,10,10,0,0,100.0,90.0,3092,29,-80,-85,6.5,4.5,26.5,60.0,label,-1052,both phones
+20261023-024807,100m,1,9,17,rover,DEA,ABC,2,0,1,0,0.0,0.0,-,0,,,,,,100.0,label,,sender's phone only
+20261023-024807,100m,2,9,22,rover,DEA,ABC,0,0,0,0,,,-,0,,,,,,100.0,label,,sender's phone only
+20261023-024807,100m,3,12,22,rover,DEA,ABC,0,0,0,0,,,-,0,,,,,,100.0,label,,sender's phone only
+20261023-024807,100m,1,9,17,base,ABC,DEA,,0,,,,,,0,,,,,,100.0,label,,receiver's phone only
+20261023-024807,100m,2,9,22,base,ABC,DEA,,0,,,,,,0,,,,,,100.0,label,,receiver's phone only
+20261023-024807,100m,3,12,22,base,ABC,DEA,,0,,,,,,0,,,,,,100.0,label,,receiver's phone only
+20261023-025036,150m,1,9,17,rover,DEA,ABC,2,0,1,0,0.0,0.0,-,0,,,,,,150.0,label,,sender's phone only
+20261023-025036,150m,2,9,22,rover,DEA,ABC,0,0,0,0,,,-,0,,,,,,150.0,label,,sender's phone only
+20261023-025036,150m,3,12,22,rover,DEA,ABC,0,0,0,0,,,-,0,,,,,,150.0,label,,sender's phone only
+20261023-025036,150m,1,9,17,base,ABC,DEA,,0,,,,,,0,,,,,,150.0,label,,receiver's phone only
+20261023-025036,150m,2,9,22,base,ABC,DEA,,0,,,,,,0,,,,,,150.0,label,,receiver's phone only
+20261023-025036,150m,3,12,22,base,ABC,DEA,,0,,,,,,0,,,,,,150.0,label,,receiver's phone only
+20261023-025511,test,1,9,17,rover,DEA,ABC,1,1,0,0,100.0,100.0,464,4,-79.5,-82,11.1,10.2,23.6,56.5,gps,-200,both phones
+20261023-025511,test,2,9,22,rover,DEA,ABC,0,0,0,0,,,-,0,,,,,,56.5,gps,,both phones
+20261023-025511,test,3,12,22,rover,DEA,ABC,0,0,0,0,,,-,0,,,,,,56.5,gps,,both phones
+20261023-025511,test,1,9,17,base,ABC,DEA,1,1,0,0,100.0,100.0,461,4,-76.5,-79,10.7,10.0,23.1,56.5,gps,200,both phones
+20261023-025511,test,2,9,22,base,ABC,DEA,0,0,0,0,,,-,0,,,,,,56.5,gps,,both phones
+20261023-025511,test,3,12,22,base,ABC,DEA,0,0,0,0,,,-,0,,,,,,56.5,gps,,both phones
+20261023-025558,60m again,1,9,17,rover,DEA,ABC,10,10,0,0,100.0,100.0,463,27,-78,-83,11.0,10.2,23.5,60.0,label,-322,both phones
+20261023-025558,60m again,2,9,22,rover,DEA,ABC,10,10,0,0,100.0,100.0,463,27,-76,-81,10.8,10.5,23.3,60.0,label,-279,both phones
+20261023-025558,60m again,3,12,22,rover,DEA,ABC,10,10,0,0,100.0,80.0,3093,30,-76.5,-84,6.5,5.0,26.5,60.0,label,-486,both phones
+20261023-025558,60m again,1,9,17,base,ABC,DEA,10,10,0,0,100.0,90.0,464,27,-75,-88,10.8,10.2,23.3,60.0,label,322,both phones
+20261023-025558,60m again,2,9,22,base,ABC,DEA,10,10,0,0,100.0,100.0,463,28,-75.0,-81,10.7,9.8,23.1,60.0,label,279,both phones
+20261023-025558,60m again,3,12,22,base,ABC,DEA,10,10,0,0,100.0,90.0,3091,28,-77.0,-90,6.2,5.5,26.2,60.0,label,486,both phones
+20261023-031128,150m,1,9,17,rover,DEA,ABC,10,10,0,0,100.0,100.0,461,28,-101.0,-106,8.5,6.8,21.0,150.0,label,206,both phones
+20261023-031128,150m,2,9,22,rover,DEA,ABC,10,10,0,0,100.0,90.0,464,27,-98,-108,9.5,4.2,22.0,150.0,label,143,both phones
+20261023-031128,150m,3,12,22,rover,DEA,ABC,10,10,0,0,100.0,90.0,3092,29,-92,-100,6.5,4.8,26.5,150.0,label,31,both phones
+20261023-031128,150m,1,9,17,base,ABC,DEA,10,10,0,0,100.0,100.0,462,27,-98,-103,8.5,6.2,21.0,150.0,label,-206,both phones
+20261023-031128,150m,2,9,22,base,ABC,DEA,10,10,0,0,100.0,100.0,462,27,-98,-111,9.0,-1.8,21.5,150.0,label,-143,both phones
+20261023-031128,150m,3,12,22,base,ABC,DEA,10,10,0,0,100.0,100.0,3092,30,-91.5,-104,6.0,3.0,26.0,150.0,label,-31,both phones
+20261023-032704,t,1,9,22,rover,DEA,ABC,1,1,0,0,100.0,100.0,462,3,-99,-102,9.2,8.8,21.7,,,2713,both phones
+20261023-032704,t,1,9,22,base,ABC,DEA,0,0,0,0,,,-,3,-103,-105,0.5,-0.8,13.0,,,-2713,both phones
+20261023-032839,t,1,9,22,rover,DEA,ABC,1,1,0,0,100.0,0.0,2494,3,-91,-93,11.0,10.0,23.5,,,295,both phones
+20261023-032839,t,1,9,22,base,ABC,DEA,0,0,0,0,,,-,3,-89,-92,9.8,8.8,22.3,,,-295,both phones
+20261023-033035,400m,1,9,17,rover,DEA,ABC,10,10,0,0,100.0,100.0,463,27,-110,-114,1.5,-4.2,14.0,400.0,label,1778,both phones
+20261023-033035,400m,2,9,22,rover,DEA,ABC,10,10,0,0,100.0,100.0,462,26,-106.0,-113,5.3,-2.5,17.9,400.0,label,1666,both phones
+20261023-033035,400m,3,12,22,rover,DEA,ABC,10,10,0,0,100.0,100.0,3092,29,-101,-114,5.0,-11.2,25.0,400.0,label,1706,both phones
+20261023-033035,400m,1,9,17,base,ABC,DEA,10,10,0,0,100.0,100.0,462,27,-108,-114,1.8,-12.2,14.3,400.0,label,-1778,both phones
+20261023-033035,400m,2,9,22,base,ABC,DEA,10,10,0,0,100.0,100.0,462,27,-106,-114,4.0,-8.5,16.5,400.0,label,-1666,both phones
+20261023-033035,400m,3,12,22,base,ABC,DEA,10,10,0,0,100.0,80.0,3093,29,-102,-111,4.5,-1.5,24.5,400.0,label,-1706,both phones

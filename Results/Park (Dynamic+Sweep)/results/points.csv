@@ -1,0 +1,7 @@
+session,label,step,sf,dbm,from_role,from,to,sent,delivered,failed,skipped,rate_pct,first_try_pct,rtt_median_ms,packets_heard,rssi_median,rssi_min,snr_median,snr_min,margin_db,distance_m,distance_from,skew_ms,source
+20261026-183848,park,1,9,17,rover,DEA,ABC,20,19,1,0,95.0,80.0,463,51,-113,-114,-9.5,-14.5,3.0,348.6,gps,-151,both phones
+20261026-183848,park,2,9,22,rover,DEA,ABC,20,20,0,0,100.0,95.0,463,52,-112.0,-113,-6.2,-13.8,6.3,348.6,gps,-100,both phones
+20261026-183848,park,3,12,22,rover,DEA,ABC,20,20,0,0,100.0,95.0,3092,56,-112.0,-113,-6.3,-12.5,13.7,348.6,gps,-30,both phones
+20261026-183848,park,1,9,17,base,ABC,DEA,20,20,0,0,100.0,90.0,463,52,-112.0,-113,-8.5,-14.5,4.0,348.6,gps,151,both phones
+20261026-183848,park,2,9,22,base,ABC,DEA,20,20,0,0,100.0,95.0,462,53,-111,-113,-3.2,-11.2,9.3,348.6,gps,100,both phones
+20261026-183848,park,3,12,22,base,ABC,DEA,20,20,0,0,100.0,95.0,3091,56,-107.0,-114,-7.1,-14.8,12.9,348.6,gps,30,both phones

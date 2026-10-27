@@ -1,0 +1,220 @@
+========================================================================
+Session 20261015-002416: rundown-b test, paths both, tx 17 dBm, fw 0.5.1
+  files: base ML_20261015-002416_base_ABC.jsonl, rover ML_20261015-002416_rover_DEA.jsonl
+  base board ABC: stopped (app) after 2868 messages
+  base battery: 4159 -> 3970 mV (97 -> 75 %) over 719 min; noise floor -114 dBm
+  rover board DEA: stopped (app) after 2892 messages
+  rover battery: 4158 -> 3965 mV (97 -> 73 %) over 719 min; noise floor -114 dBm
+  distance rover-base: median 2 m (min 0, max 13) - GPS based, +/- the fixes' accuracy
+
+  By direction and path (rate = delivered / (delivered + failed); skips excluded)
+                            made  deliv.  failed  skip     rate  rtt med  rtt p95
+    base->rover LoRa        2868    2868       0     0  100.0 %      618      805
+    base->rover relay       2868    2868       0     0  100.0 %      853     1732
+    rover->base LoRa        2892    2892       0     0  100.0 %      618      804
+    rover->base relay       2892    2892       0     0  100.0 %      914     1702
+
+  By size (both directions)
+                            made  deliv.  failed  skip     rate  rtt med  rtt p95
+    LoRa   5 chars            55      55       0     0  100.0 %      392      395
+    LoRa   6 chars            70      70       0     0  100.0 %      392      394
+    LoRa   7 chars            75      75       0     0  100.0 %      392      407
+    LoRa   8 chars            73      73       0     0  100.0 %      412      415
+    LoRa   9 chars            52      52       0     0  100.0 %      413      416
+    LoRa  10 chars            60      60       0     0  100.0 %      413      416
+    LoRa  11 chars            63      63       0     0  100.0 %      413      416
+    LoRa  12 chars            49      49       0     0  100.0 %      434      439
+    LoRa  13 chars            56      56       0     0  100.0 %      434      437
+    LoRa  14 chars            65      65       0     0  100.0 %      433      437
+    LoRa  15 chars            61      61       0     0  100.0 %      434      437
+    LoRa  16 chars            67      67       0     0  100.0 %      433      439
+    LoRa  17 chars            54      54       0     0  100.0 %      454      457
+    LoRa  18 chars            61      61       0     0  100.0 %      454      456
+    LoRa  19 chars            51      51       0     0  100.0 %      454      457
+    LoRa  20 chars            66      66       0     0  100.0 %      454      459
+    LoRa  21 chars            47      47       0     0  100.0 %      475      489
+    LoRa  22 chars            60      60       0     0  100.0 %      476      479
+    LoRa  23 chars            61      61       0     0  100.0 %      475      481
+    LoRa  24 chars            52      52       0     0  100.0 %      475      481
+    LoRa  25 chars            58      58       0     0  100.0 %      475      484
+    LoRa  26 chars            57      57       0     0  100.0 %      496      502
+    LoRa  27 chars            61      61       0     0  100.0 %      496      503
+    LoRa  28 chars            66      66       0     0  100.0 %      496      507
+    LoRa  29 chars            55      55       0     0  100.0 %      496      515
+    LoRa  30 chars            61      61       0     0  100.0 %      517      521
+    LoRa  31 chars            59      59       0     0  100.0 %      517      522
+    LoRa  32 chars            84      84       0     0  100.0 %      517      522
+    LoRa  33 chars            49      49       0     0  100.0 %      517      523
+    LoRa  34 chars            57      57       0     0  100.0 %      517      522
+    LoRa  35 chars            60      60       0     0  100.0 %      537      545
+    LoRa  36 chars            58      58       0     0  100.0 %      538      549
+    LoRa  37 chars            63      63       0     0  100.0 %      538      545
+    LoRa  38 chars            57      57       0     0  100.0 %      537      561
+    LoRa  39 chars            54      54       0     0  100.0 %      559      575
+    LoRa  40 chars            48      48       0     0  100.0 %      558      577
+    LoRa  41 chars            71      71       0     0  100.0 %      558      565
+    LoRa  42 chars            62      62       0     0  100.0 %      559      570
+    LoRa  43 chars            73      73       0     0  100.0 %      558      568
+    LoRa  44 chars            63      63       0     0  100.0 %      579      588
+    LoRa  45 chars            53      53       0     0  100.0 %      579      584
+    LoRa  46 chars            61      61       0     0  100.0 %      578      585
+    LoRa  47 chars            57      57       0     0  100.0 %      579      587
+    LoRa  48 chars            68      68       0     0  100.0 %      599      605
+    LoRa  49 chars            54      54       0     0  100.0 %      599      615
+    LoRa  50 chars            44      44       0     0  100.0 %      599      614
+    LoRa  51 chars            58      58       0     0  100.0 %      601      616
+    LoRa  52 chars            53      53       0     0  100.0 %      600      616
+    LoRa  53 chars            62      62       0     0  100.0 %      619      634
+    LoRa  54 chars            57      57       0     0  100.0 %      619      629
+    LoRa  55 chars            51      51       0     0  100.0 %      621      625
+    LoRa  56 chars            55      55       0     0  100.0 %      620      636
+    LoRa  57 chars            79      79       0     0  100.0 %      641      649
+    LoRa  58 chars            66      66       0     0  100.0 %      641      646
+    LoRa  59 chars            67      67       0     0  100.0 %      640      647
+    LoRa  60 chars            57      57       0     0  100.0 %      640      648
+    LoRa  61 chars            55      55       0     0  100.0 %      641      646
+    LoRa  62 chars            70      70       0     0  100.0 %      661      666
+    LoRa  63 chars            63      63       0     0  100.0 %      661      667
+    LoRa  64 chars            67      67       0     0  100.0 %      660      667
+    LoRa  65 chars            64      64       0     0  100.0 %      661      665
+    LoRa  66 chars            62      62       0     0  100.0 %      681      686
+    LoRa  67 chars            54      54       0     0  100.0 %      681      684
+    LoRa  68 chars            65      65       0     0  100.0 %      681      689
+    LoRa  69 chars            69      69       0     0  100.0 %      681      687
+    LoRa  70 chars            62      62       0     0  100.0 %      682      687
+    LoRa  71 chars            50      50       0     0  100.0 %      702      707
+    LoRa  72 chars            65      65       0     0  100.0 %      701      706
+    LoRa  73 chars            55      55       0     0  100.0 %      702      709
+    LoRa  74 chars            73      73       0     0  100.0 %      702      706
+    LoRa  75 chars            55      55       0     0  100.0 %      722      726
+    LoRa  76 chars            48      48       0     0  100.0 %      722      728
+    LoRa  77 chars            60      60       0     0  100.0 %      722      725
+    LoRa  78 chars            53      53       0     0  100.0 %      722      729
+    LoRa  79 chars            57      57       0     0  100.0 %      722      741
+    LoRa  80 chars            57      57       0     0  100.0 %      742      745
+    LoRa  81 chars            67      67       0     0  100.0 %      742      749
+    LoRa  82 chars            52      52       0     0  100.0 %      743      756
+    LoRa  83 chars            57      57       0     0  100.0 %      743      747
+    LoRa  84 chars            71      71       0     0  100.0 %      762      767
+    LoRa  85 chars            67      67       0     0  100.0 %      763      767
+    LoRa  86 chars            55      55       0     0  100.0 %      763      766
+    LoRa  87 chars            66      66       0     0  100.0 %      763      767
+    LoRa  88 chars            64      64       0     0  100.0 %      763      767
+    LoRa  89 chars            67      67       0     0  100.0 %      783      787
+    LoRa  90 chars            54      54       0     0  100.0 %      784      788
+    LoRa  91 chars            62      62       0     0  100.0 %      783      787
+    LoRa  92 chars            56      56       0     0  100.0 %      784      787
+    LoRa  93 chars            62      62       0     0  100.0 %      803      807
+    LoRa  94 chars            50      50       0     0  100.0 %      804      807
+    LoRa  95 chars            72      72       0     0  100.0 %      804      809
+    LoRa  96 chars            55      55       0     0  100.0 %      805      810
+    LoRa  97 chars            59      59       0     0  100.0 %      803      807
+    LoRa  98 chars            53      53       0     0  100.0 %      825      829
+    LoRa  99 chars            53      53       0     0  100.0 %      824      832
+    LoRa 100 chars            58      58       0     0  100.0 %      824      829
+    relay   5 chars           55      55       0     0  100.0 %      839     1852
+    relay   6 chars           70      70       0     0  100.0 %      861     1607
+    relay   7 chars           75      75       0     0  100.0 %      849     2098
+    relay   8 chars           73      73       0     0  100.0 %      858     1929
+    relay   9 chars           52      52       0     0  100.0 %      977     2183
+    relay  10 chars           60      60       0     0  100.0 %      928     2159
+    relay  11 chars           63      63       0     0  100.0 %      869     1859
+    relay  12 chars           49      49       0     0  100.0 %      874     1171
+    relay  13 chars           56      56       0     0  100.0 %      893     1616
+    relay  14 chars           65      65       0     0  100.0 %      860     1316
+    relay  15 chars           61      61       0     0  100.0 %      935     1781
+    relay  16 chars           67      67       0     0  100.0 %      870     1510
+    relay  17 chars           54      54       0     0  100.0 %      896     1463
+    relay  18 chars           61      61       0     0  100.0 %      894     1203
+    relay  19 chars           51      51       0     0  100.0 %      883     1078
+    relay  20 chars           66      66       0     0  100.0 %      914     1510
+    relay  21 chars           47      47       0     0  100.0 %      887     1653
+    relay  22 chars           60      60       0     0  100.0 %      906     1732
+    relay  23 chars           61      61       0     0  100.0 %      903     1300
+    relay  24 chars           52      52       0     0  100.0 %      917     1981
+    relay  25 chars           58      58       0     0  100.0 %      902     1680
+    relay  26 chars           57      57       0     0  100.0 %      918     1362
+    relay  27 chars           61      61       0     0  100.0 %      934     2044
+    relay  28 chars           66      66       0     0  100.0 %      920     1426
+    relay  29 chars           55      55       0     0  100.0 %      920     1595
+    relay  30 chars           61      61       0     0  100.0 %      883     1239
+    relay  31 chars           59      59       0     0  100.0 %      860     1406
+    relay  32 chars           84      84       0     0  100.0 %      870     1974
+    relay  33 chars           49      49       0     0  100.0 %      899     1389
+    relay  34 chars           57      57       0     0  100.0 %      899     1778
+    relay  35 chars           60      60       0     0  100.0 %      909     1894
+    relay  36 chars           58      58       0     0  100.0 %      830     1863
+    relay  37 chars           63      63       0     0  100.0 %      957     1787
+    relay  38 chars           57      57       0     0  100.0 %      854     1389
+    relay  39 chars           54      54       0     0  100.0 %      858     1149
+    relay  40 chars           48      48       0     0  100.0 %      978     1701
+    relay  41 chars           71      71       0     0  100.0 %      960     2632
+    relay  42 chars           62      62       0     0  100.0 %      844     2124
+    relay  43 chars           73      73       0     0  100.0 %      909     2380
+    relay  44 chars           63      63       0     0  100.0 %      997     1740
+    relay  45 chars           53      53       0     0  100.0 %     1004     2281
+    relay  46 chars           61      61       0     0  100.0 %      888     2021
+    relay  47 chars           57      57       0     0  100.0 %      873     1781
+    relay  48 chars           68      68       0     0  100.0 %      842     1538
+    relay  49 chars           54      54       0     0  100.0 %      833     1531
+    relay  50 chars           44      44       0     0  100.0 %      921     1555
+    relay  51 chars           58      58       0     0  100.0 %      876     2169
+    relay  52 chars           53      53       0     0  100.0 %      931     1695
+    relay  53 chars           62      62       0     0  100.0 %      880     1718
+    relay  54 chars           57      57       0     0  100.0 %      885     2857
+    relay  55 chars           51      51       0     0  100.0 %      845     2066
+    relay  56 chars           55      55       0     0  100.0 %      844     1512
+    relay  57 chars           79      79       0     0  100.0 %      878     2205
+    relay  58 chars           66      66       0     0  100.0 %      900     1733
+    relay  59 chars           67      67       0     0  100.0 %      852     1267
+    relay  60 chars           57      57       0     0  100.0 %      898     1618
+    relay  61 chars           55      55       0     0  100.0 %      865     1906
+    relay  62 chars           70      70       0     0  100.0 %      874     1881
+    relay  63 chars           63      63       0     0  100.0 %      825     1647
+    relay  64 chars           67      67       0     0  100.0 %      869     1318
+    relay  65 chars           64      64       0     0  100.0 %      856     1759
+    relay  66 chars           62      62       0     0  100.0 %      852     1264
+    relay  67 chars           54      54       0     0  100.0 %      886     2431
+    relay  68 chars           65      65       0     0  100.0 %      893     1706
+    relay  69 chars           69      69       0     0  100.0 %      887     1844
+    relay  70 chars           62      62       0     0  100.0 %      846     1228
+    relay  71 chars           50      50       0     0  100.0 %      944     3063
+    relay  72 chars           65      65       0     0  100.0 %      860     1330
+    relay  73 chars           55      55       0     0  100.0 %      886     1593
+    relay  74 chars           73      73       0     0  100.0 %      928     1709
+    relay  75 chars           55      55       0     0  100.0 %      912     2127
+    relay  76 chars           48      48       0     0  100.0 %      888     2354
+    relay  77 chars           60      60       0     0  100.0 %      850     1827
+    relay  78 chars           53      53       0     0  100.0 %      841     1326
+    relay  79 chars           57      57       0     0  100.0 %      844     1286
+    relay  80 chars           57      57       0     0  100.0 %      883     1734
+    relay  81 chars           67      67       0     0  100.0 %      897     2115
+    relay  82 chars           52      52       0     0  100.0 %      882     1644
+    relay  83 chars           57      57       0     0  100.0 %      911     2536
+    relay  84 chars           71      71       0     0  100.0 %      872     1336
+    relay  85 chars           67      67       0     0  100.0 %      927     1783
+    relay  86 chars           55      55       0     0  100.0 %      859     1505
+    relay  87 chars           66      66       0     0  100.0 %      903     1522
+    relay  88 chars           64      64       0     0  100.0 %      913     1702
+    relay  89 chars           67      67       0     0  100.0 %      924     1919
+    relay  90 chars           54      54       0     0  100.0 %      924     1967
+    relay  91 chars           62      62       0     0  100.0 %      937     1692
+    relay  92 chars           56      56       0     0  100.0 %      913     1930
+    relay  93 chars           62      62       0     0  100.0 %      841     1663
+    relay  94 chars           50      50       0     0  100.0 %      832     1616
+    relay  95 chars           72      72       0     0  100.0 %      931     1692
+    relay  96 chars           55      55       0     0  100.0 %      913     1441
+    relay  97 chars           59      59       0     0  100.0 %      832     1386
+    relay  98 chars           53      53       0     0  100.0 %      880     1328
+    relay  99 chars           53      53       0     0  100.0 %      935     1365
+    relay 100 chars           58      58       0     0  100.0 %      946     1990
+
+  By distance (250 m bands)
+                            made  deliv.  failed  skip     rate  rtt med  rtt p95
+    LoRa 0-250 m            5760    5760       0     0  100.0 %      618      805
+    relay 0-250 m           5760    5760       0     0  100.0 %      882     1730
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -33 dBm (min -51), SNR median 11.0 dB (min 9.8)
+    rover->base            RSSI median -32 dBm (min -72), SNR median 11.0 dB (min 10.0)
+

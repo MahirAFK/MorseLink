@@ -1,0 +1,9 @@
+{"t":1792412879851,"kind":"app","event":"start","app":"0.2.0"}
+{"t":1792412879901,"kind":"ble","state":"connecting","mtu":23}
+{"t":1792412884994,"kind":"ble","state":"not connected","mtu":23,"why":"connecting failed: Android's Bluetooth error 133 (it tries again; if it keeps on, switch Bluetooth off and on)"}
+{"t":1792412888996,"kind":"ble","state":"connecting","mtu":23}
+{"t":1792412894020,"kind":"ble","state":"not connected","mtu":23,"why":"connecting failed: Android's Bluetooth error 133 (it tries again; if it keeps on, switch Bluetooth off and on)"}
+{"t":1792412902021,"kind":"ble","state":"connecting","mtu":23}
+{"t":1792412907055,"kind":"ble","state":"not connected","mtu":23,"why":"connecting failed: Android's Bluetooth error 133 (it tries again; if it keeps on, switch Bluetooth off and on)"}
+{"t":1792412923062,"kind":"ble","state":"connecting","mtu":23}
+{"t":1792412928140,"kind":"ble","state":"not connected","mtu":23,"why":"connecting failed: Android's Bluetooth error 133 (it tries again; if it keeps on, switch Bluetooth off and on)"}

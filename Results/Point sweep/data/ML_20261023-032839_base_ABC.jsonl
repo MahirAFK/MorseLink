@@ -1,0 +1,27 @@
+{"t":1792718919435,"kind":"session","session":"20261023-032839","role":"base","test":"point","paths":"lora","seed":1662297607,"tx_dbm":22,"sf":12,"bw_khz":125,"base":"500m from base","height":"outside","carry":"hand","battery":"","note":"","label":"t","plan":"9:22","peer_radio":{"sf":12,"bw":125,"dbm":22},"phone":"","app":"0.2.2","protocol":4,"fw":"0.6.2","clock":"network (assumed: set the phone to automatic time)","own":"ABC","peer":"DEA"}
+{"t":1792718919436,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"status","session":"20261023-032839","state":"starting","from":"ABC"}}
+{"t":1792718919643,"kind":"board","n":10,"ms":9426177,"ev":"START","session":"20261023-032839","role":"base","test":"point","paths":"lora","seed":1662297607,"tx_dbm":22,"sf":12,"fw":"0.6.2","own":"ABC","peer":"DEA","lb":0,"plan":"9:22","size":25}
+{"t":1792718919645,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"status","session":"20261023-032839","state":"running","from":"ABC"}}
+{"t":1792718919647,"kind":"board","n":10,"ms":9426177,"ev":"STEP","i":1,"sf":9,"dbm":22,"step_ms":175000}
+{"t":1792718919648,"kind":"board","n":3,"ms":9426177,"ev":"PATH","path":"L","state":"checking","heard_s":-1,"they_s":19}
+{"t":1792718919689,"kind":"board","n":4,"ms":9426177,"ev":"PATH","path":"R","state":"off","heard_s":18,"they_s":67}
+{"t":1792718919909,"kind":"dev","line":"ST DEA connected 88 0 checking off"}
+{"t":1792718919911,"kind":"dev","line":"RD 9 125 22"}
+{"t":1792718919913,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"radio","from":"ABC","board":true,"sf":9,"bw":125,"dbm":22}}
+{"t":1792718921080,"kind":"board","n":5,"ms":9427476,"ev":"TX","type":"KEEPALIVE","dst":"DEA","id":35964,"copy":1,"bytes":12,"air_ms":145,"dbm":22,"lbt_ms":0,"duty_pm":54}
+{"t":1792718921174,"kind":"ctl","dir":"in","msg":{"cmd":"radio","from":"DEA","board":true,"sf":9,"bw":125,"dbm":22}}
+{"t":1792718922481,"kind":"board","n":6,"ms":9429059,"ev":"RX","type":"KEEPALIVE","src":"DEA","dst":"ABC","id":54047,"bytes":12,"rssi":-93,"snr":10.0,"dup":0}
+{"t":1792718922483,"kind":"board","n":7,"ms":9429059,"ev":"PATH","path":"L","state":"connected","heard_s":0,"they_s":1}
+{"t":1792718922748,"kind":"dev","line":"ST DEA connected 88 0 connected off"}
+{"t":1792718923649,"kind":"board","n":8,"ms":9430052,"ev":"TX","type":"KEEPALIVE","dst":"DEA","id":35965,"copy":1,"bytes":12,"air_ms":145,"dbm":22,"lbt_ms":0,"duty_pm":54}
+{"t":1792718924682,"kind":"board","n":9,"ms":9431255,"ev":"RX","type":"KEEPALIVE","src":"DEA","dst":"ABC","id":54048,"bytes":12,"rssi":-91,"snr":11.5,"dup":0}
+{"t":1792718929093,"kind":"board","n":10,"ms":9435648,"ev":"RXBAD"}
+{"t":1792718929451,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"pos","session":"20261023-032839","lat":-33.9596091,"lon":18.462765,"acc":9.9350004196167,"from":"ABC"}}
+{"t":1792718931120,"kind":"board","n":11,"ms":9437679,"ev":"RX","type":"MSG","src":"DEA","dst":"ABC","id":54049,"bytes":35,"rssi":-87,"snr":11.0,"dup":0,"seq":1,"path":"L"}
+{"t":1792718931123,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"pt","session":"20261023-032839","step":1,"rssi":-87,"snr":11.0,"from":"ABC"}}
+{"t":1792718931293,"kind":"board","n":12,"ms":9437679,"ev":"TX","type":"RECEIPT","dst":"DEA","id":35966,"copy":1,"bytes":12,"air_ms":145,"dbm":22,"lbt_ms":98,"duty_pm":54}
+{"t":1792718933920,"kind":"ctl","dir":"in","msg":{"cmd":"stop","session":"20261023-032839","from":"DEA"}}
+{"t":1792718934039,"kind":"board","n":13,"ms":9440575,"ev":"STEP","i":0,"sf":12,"dbm":22,"restored":1}
+{"t":1792718934041,"kind":"board","n":14,"ms":9440575,"ev":"STOP","reason":"app","gen":0,"ack_l":0,"fail_l":0,"skip_l":0,"ack_r":0,"fail_r":0,"skip_r":0}
+{"t":1792718934042,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"status","session":"20261023-032839","state":"stopped","detail":"app","from":"ABC"}}
+{"t":1792718934042,"kind":"session_end","session":"20261023-032839","gen":0,"lora":{"sent":0,"ack":0,"fail":0,"skip":0},"relay":{"sent":0,"ack":0,"fail":0,"skip":0},"link_lost":0,"label":"t","steps":[{"step":1,"sf":9,"dbm":22,"sent":0,"ack":0,"fail":0,"skip":0}]}

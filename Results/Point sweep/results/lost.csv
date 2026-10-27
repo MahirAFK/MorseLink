@@ -1,0 +1,7 @@
+session,board,role,sf,tx_dbm,start_min,end_min,minutes,why,rebuilt,open_at_end
+20261021-220851,DEA,rover,12,22,0.36,4.32,3.96,no-receipt,0,1
+20261023-022121,DEA,rover,12,22,0.37,0.66,0.29,no-receipt,0,1
+20261023-022332,DEA,rover,12,22,0.37,1.54,1.17,no-receipt,0,0
+20261023-022636,ABC,rover,12,22,0.38,0.43,0.05,no-receipt,0,1
+20261023-024807,DEA,rover,12,22,0.37,0.49,0.12,no-receipt,0,1
+20261023-025036,DEA,rover,12,22,0.37,0.56,0.19,no-receipt,0,1

@@ -1,0 +1,115 @@
+========================================================================
+Session 20261026-182908: dynamic test, paths both, SF9 (range level 1), tx 22 dBm, fw 0.6.4
+  files: base ML_20261026-182908_base_ABC.jsonl, rover ML_20261026-182908_rover_DEA.jsonl
+  base board ABC: stopped (app) after 34 messages
+  base board ABC: 85 packets heard over LoRa, 9 damaged (RXBAD)
+  base battery: 3561 -> 3557 mV (3 -> 3 %) over 7 min; noise floor -114 dBm
+  rover board DEA: stopped (app) after 33 messages
+  rover board DEA: 80 packets heard over LoRa, 12 damaged (RXBAD)
+  rover battery: 3585 -> 3587 mV (5 -> 5 %) over 7 min; noise floor -112 dBm
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                34      32       1     1   97.0 %   78.8 %      700     3495
+    base->rover relay               34      33       1     0   97.1 %   97.1 %     1141     1576
+    rover->base LoRa                33      31       2     0   93.9 %   84.8 %      641     2825
+    rover->base relay               33      33       0     0  100.0 %  100.0 %     1337     3457
+
+  By size (both directions), in bands
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa   5-25  chars              12      12       0     0  100.0 %  100.0 %      433      476
+    LoRa  26-50  chars              15      14       0     1  100.0 %   64.3 %      579     3364
+    LoRa  51-75  chars              20      19       1     0   95.0 %   90.0 %      661     3495
+    LoRa  76-100 chars              20      18       2     0   90.0 %   75.0 %      763     6436
+    relay   5-25  chars             12      12       0     0  100.0 %  100.0 %     1272     2114
+    relay  26-50  chars             15      14       1     0   93.3 %   93.3 %     1228     3457
+    relay  51-75  chars             20      20       0     0  100.0 %  100.0 %     1301     4765
+    relay  76-100 chars             20      20       0     0  100.0 %  100.0 %     1251     4431
+
+  By area / situation (rover's labels)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa ?/walking                  67      63       3     1   95.5 %   81.8 %      662     3364
+    relay ?/walking                 67      66       1     0   98.5 %   98.5 %     1251     2438
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -98 dBm (min -114), SNR median 6.2 dB (min -8.2)
+    rover->base            RSSI median -101 dBm (min -113), SNR median 6.7 dB (min -7.5)
+
+  Not delivered, why:
+    LoRa failed: no-receipt: 3
+    LoRa skipped: lost: 1
+    relay failed: timeout: 1
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 99.0 % of 9 min; lost 1 time(s), 0.1 min in all (longest 0.1 min)
+         7.0 -    7.1 min    0.1 min  no-receipt
+      LoRa path states: connected 99.1 %, they-cant-hear 0.9 %
+      by the rover's labels: ?/walking up 99 % of 9 min
+    rover DEA: up 97.6 % of 8 min; lost 1 time(s), 0.2 min in all (longest 0.2 min)
+         6.4 -    6.6 min    0.2 min  no-receipt
+      LoRa path states: connected 97.6 %, they-cant-hear 2.4 %
+      by the rover's labels: ?/walking up 98 % of 8 min
+
+========================================================================
+Session 20261026-183848: point test, paths lora, SF9 (range level 1), tx 22 dBm, fw 0.6.4 (the boards' own setting: the plan's steps below)
+  files: base ML_20261026-183848_base_ABC.jsonl, rover ML_20261026-183848_rover_DEA.jsonl
+  base board ABC: stopped (done) after 60 messages
+  base board ABC: 159 packets heard over LoRa, 9 damaged (RXBAD)
+  base battery: 3557 -> 3552 mV (3 -> 3 %) over 24 min; noise floor -113 dBm
+  rover board DEA: stopped (done) after 60 messages
+  rover board DEA: 161 packets heard over LoRa, 1 damaged (RXBAD)
+  rover battery: 3583 -> 3578 mV (5 -> 4 %) over 24 min; noise floor -110 dBm
+  distance rover-base: median 349 m (min 343, max 354) - GPS based, +/- the fixes' accuracy
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa                60      60       0     0  100.0 %   93.3 %      464     3094
+    rover->base LoRa                60      59       1     0   98.3 %   90.0 %      465     3094
+
+  Point test at "park": plan SF9/17 dBm, SF9/22 dBm, SF12/22 dBm
+
+  By step and direction
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    1 SF9/17 base->rover            20      20       0     0  100.0 %   90.0 %      463     2597
+    1 SF9/17 rover->base            20      19       1     0   95.0 %   80.0 %      463     5293
+    2 SF9/22 base->rover            20      20       0     0  100.0 %   95.0 %      462     2489
+    2 SF9/22 rover->base            20      20       0     0  100.0 %   95.0 %      463     2477
+    3 SF12/22 base->rover           20      20       0     0  100.0 %   95.0 %     3091    10369
+    3 SF12/22 rover->base           20      20       0     0  100.0 %   95.0 %     3092     8845
+
+  By distance (250 m bands)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa 250-500 m                 120     119       1     0   99.2 %   91.7 %      464     3094
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -111 dBm (min -113), SNR median -7.2 dB (min -12.2)
+    rover->base            RSSI median -112 dBm (min -114), SNR median -7.2 dB (min -14.5)
+
+  Not delivered, why:
+    LoRa failed: no-receipt: 1
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 25 min; lost 0 time(s), 0.0 min in all
+      LoRa path states: connected 97.3 %, checking 2.7 %
+    rover DEA: up 98.9 % of 25 min; lost 1 time(s), 0.3 min in all (longest 0.3 min)
+         3.1 -    3.4 min    0.3 min  no-receipt
+      LoRa path states: connected 97.9 %, they-cant-hear 1.1 %, checking 1.0 %
+
+========================================================================
+All sessions by range setting (rate = delivered / (delivered + failed); skips excluded)
+    test / SF / dBm / path          made  deliv.  failed  skip     rate  1st try  rtt med
+    dynamic SF9 22 dBm LoRa           67      63       3     1   95.5 %   81.8 %      662
+    dynamic SF9 22 dBm relay          67      66       1     0   98.5 %   98.5 %     1251
+
+========================================================================
+Point tests (v0.6.1), per step and direction. rate = delivered / (delivered + failed); RSSI / SNR as
+the receiver heard the sender in that step (all its packets); margin = median SNR - the SF's limit
+    label                      step setting     dir          sent deliv    rate     1st  RSSI med/min  SNR med/min  margin    n
+    park                          1 SF9/17      base->rover    20    20 100.0 %  90.0 %   -112.0/-113   -8.5/-14.5     4.0   52
+    park                          1 SF9/17      rover->base    20    19  95.0 %  80.0 %     -113/-114   -9.5/-14.5     3.0   51
+    park                          2 SF9/22      base->rover    20    20 100.0 %  95.0 %     -111/-113   -3.2/-11.2     9.3   53
+    park                          2 SF9/22      rover->base    20    20 100.0 %  95.0 %   -112.0/-113   -6.2/-13.8     6.3   52
+    park                          3 SF12/22     base->rover    20    20 100.0 %  95.0 %   -107.0/-114   -7.1/-14.8    12.9   56
+    park                          3 SF12/22     rover->base    20    20 100.0 %  95.0 %   -112.0/-113   -6.3/-12.5    13.7   56
+    (the two boards switched within 0.2 s of each other, by the phones' clocks; each step's settle time is 10-20 s)
+

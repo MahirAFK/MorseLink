@@ -1,0 +1,7 @@
+Idle ==> 0.026A
+Idle + LoRa ==> 0.0352A
+Idle + LoRa + Send ==> 0.044A
+Idle + LoRa + BLE ==> 0.042A
+Idle + LoRa + BLE + Key ==> 0.043A
+Idle + LoRa + BLE + Motor@25% ==> 0.1A
+Idle + LoRa + BLE + 2Motors@25% ==> 0.18A

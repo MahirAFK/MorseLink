@@ -1,0 +1,2 @@
+# Dynamic 2: indoor stretches with a LoRa outage were the mall
+20261018-184526 indoors+lost dense_urban

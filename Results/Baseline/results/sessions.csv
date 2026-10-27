@@ -1,0 +1,5 @@
+session,test,sf,tx_dbm,from_role,path,made,delivered,failed,skipped,rate_pct,first_try_pct,rtt_median_ms,rtt_p95_ms
+20261024-051030,baseline,9,22,base,LoRa,120,120,0,0,100.0,90.8,591,3143
+20261024-051030,baseline,9,22,base,relay,120,119,1,0,99.2,99.2,1149,2085
+20261024-051030,baseline,9,22,rover,LoRa,120,120,0,0,100.0,95.0,589,2655
+20261024-051030,baseline,9,22,rover,relay,120,120,0,0,100.0,100.0,1289,2979

@@ -1,0 +1,54 @@
+========================================================================
+Session 20261024-051030: baseline test, paths both, SF9 (range level 1), tx 22 dBm, fw 0.6.2
+  files: base ML_20261024-051030_base_ABC.jsonl, rover ML_20261024-051030_rover_DEA.jsonl
+  base board ABC: stopped (done) after 120 messages
+  base board ABC: 323 packets heard over LoRa, 6 damaged (RXBAD)
+  base battery: 3726 -> 3713 mV (26 -> 20 %) over 39 min; noise floor -110 dBm
+  rover board DEA: stopped (done) after 120 messages
+  rover board DEA: 323 packets heard over LoRa, 6 damaged (RXBAD)
+  rover battery: 4085 -> 4080 mV (89 -> 88 %) over 38 min; noise floor -114 dBm
+
+  By direction and path (rate = delivered / (delivered + failed); 1st try = delivered on its first copy, of the same; skips excluded)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    base->rover LoRa               120     120       0     0  100.0 %   90.8 %      591     3143
+    base->rover relay              120     119       1     0   99.2 %   99.2 %     1149     2085
+    rover->base LoRa               120     120       0     0  100.0 %   95.0 %      589     2655
+    rover->base relay              120     120       0     0  100.0 %  100.0 %     1289     2979
+
+  By size (both directions)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa   5 chars                  60      60       0     0  100.0 %   95.0 %      382     2644
+    LoRa  25 chars                  60      60       0     0  100.0 %   95.0 %      474     2655
+    LoRa  50 chars                  60      60       0     0  100.0 %   95.0 %      598     2928
+    LoRa 100 chars                  60      60       0     0  100.0 %   86.7 %      825     3681
+    relay   5 chars                 60      59       1     0   98.3 %   98.3 %     1161     1980
+    relay  25 chars                 60      60       0     0  100.0 %  100.0 %     1260     2625
+    relay  50 chars                 60      60       0     0  100.0 %  100.0 %     1260     2555
+    relay 100 chars                 60      60       0     0  100.0 %  100.0 %     1236     3650
+
+  By area / situation (rover's labels)
+                                  made  deliv.  failed  skip     rate  1st try  rtt med  rtt p95
+    LoRa ?/?                         1       1       0     0  100.0 %  100.0 %      381      381
+    LoRa urban/stationary          239     239       0     0  100.0 %   92.9 %      589     2970
+    relay ?/?                        1       1       0     0  100.0 %  100.0 %     1119     1119
+    relay urban/stationary         239     238       1     0   99.6 %   99.6 %     1230     2555
+
+  LoRa signal at the receiver:
+    base->rover            RSSI median -108 dBm (min -114), SNR median 3.5 dB (min -15.0)
+    rover->base            RSSI median -109 dBm (min -112), SNR median -1.2 dB (min -11.8)
+
+  Not delivered, why:
+    relay failed: timeout: 1
+
+  LoRa link (each board's view: lost = the board found it unusable; during a test the link is LoRa alone)
+    base ABC: up 100.0 % of 40 min; lost 0 time(s), 0.0 min in all
+      by the rover's labels: urban/stationary up 100 % of 40 min
+    rover DEA: up 100.0 % of 40 min; lost 0 time(s), 0.0 min in all
+      by the rover's labels: urban/stationary up 100 % of 40 min
+
+========================================================================
+All sessions by range setting (rate = delivered / (delivered + failed); skips excluded)
+    test / SF / dBm / path          made  deliv.  failed  skip     rate  1st try  rtt med
+    baseline SF9 22 dBm LoRa         240     240       0     0  100.0 %   92.9 %      589
+    baseline SF9 22 dBm relay        240     239       1     0   99.6 %   99.6 %     1225
+

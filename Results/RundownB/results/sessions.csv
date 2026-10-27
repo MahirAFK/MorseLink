@@ -1,0 +1,5 @@
+session,test,from_role,path,made,delivered,failed,skipped,rate_pct,rtt_median_ms,rtt_p95_ms
+20261015-002416,rundown-b,base,LoRa,2868,2868,0,0,100.0,618,805
+20261015-002416,rundown-b,base,relay,2868,2868,0,0,100.0,853,1732
+20261015-002416,rundown-b,rover,LoRa,2892,2892,0,0,100.0,618,804
+20261015-002416,rundown-b,rover,relay,2892,2892,0,0,100.0,914,1702

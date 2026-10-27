@@ -1,0 +1,50 @@
+{"t":1792716911363,"kind":"session","session":"20261023-025511","role":"base","test":"point","paths":"lora","seed":1662290279,"tx_dbm":22,"sf":12,"bw_khz":125,"base":"500m from base","height":"outside","carry":"hand","battery":"","note":"","label":"test","plan":"9:17,9:22,12:22","peer_radio":{"sf":12,"bw":125,"dbm":22},"phone":"","app":"0.2.2","protocol":4,"fw":"0.6.2","clock":"network (assumed: set the phone to automatic time)","own":"ABC","peer":"DEA"}
+{"t":1792716911364,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"status","session":"20261023-025511","state":"starting","from":"ABC"}}
+{"t":1792716911570,"kind":"board","n":10,"ms":7418098,"ev":"START","session":"20261023-025511","role":"base","test":"point","paths":"lora","seed":1662290279,"tx_dbm":22,"sf":12,"fw":"0.6.2","own":"ABC","peer":"DEA","lb":0,"plan":"9:17/9:22/12:22","size":25}
+{"t":1792716911571,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"status","session":"20261023-025511","state":"running","from":"ABC"}}
+{"t":1792716911571,"kind":"board","n":10,"ms":7418098,"ev":"STEP","i":1,"sf":9,"dbm":17,"step_ms":175000}
+{"t":1792716911615,"kind":"board","n":3,"ms":7418098,"ev":"PATH","path":"L","state":"checking","heard_s":-1,"they_s":105}
+{"t":1792716911616,"kind":"board","n":4,"ms":7418098,"ev":"PATH","path":"R","state":"off","heard_s":1448,"they_s":-1}
+{"t":1792716911664,"kind":"dev","line":"ST DEA connected 92 0 checking off"}
+{"t":1792716911665,"kind":"dev","line":"RD 9 125 17"}
+{"t":1792716911665,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"radio","from":"ABC","board":true,"sf":9,"bw":125,"dbm":17}}
+{"t":1792716911724,"kind":"ctl","dir":"in","msg":{"cmd":"radio","from":"DEA","board":true,"sf":9,"bw":125,"dbm":17}}
+{"t":1792716913597,"kind":"board","n":5,"ms":7420141,"ev":"RX","type":"KEEPALIVE","src":"DEA","dst":"ABC","id":53858,"bytes":12,"rssi":-82,"snr":10.2,"dup":0}
+{"t":1792716915177,"kind":"board","n":6,"ms":7421572,"ev":"TX","type":"KEEPALIVE","dst":"DEA","id":35774,"copy":1,"bytes":12,"air_ms":145,"dbm":17,"lbt_ms":0,"duty_pm":45}
+{"t":1792716915955,"kind":"gps","lat":-33.9595527,"lon":18.4626764,"acc":20.68199920654297,"alt":120.9000015258789,"spd":0.6589246392250061,"hdg":104.02603149414062}
+{"t":1792716916251,"kind":"board","n":7,"ms":7422793,"ev":"RX","type":"KEEPALIVE","src":"DEA","dst":"ABC","id":53859,"bytes":12,"rssi":-78,"snr":11.8,"dup":0}
+{"t":1792716916251,"kind":"board","n":8,"ms":7422793,"ev":"PATH","path":"L","state":"connected","heard_s":0,"they_s":0}
+{"t":1792716916474,"kind":"dev","line":"ST DEA connected 92 0 connected off"}
+{"t":1792716916612,"kind":"board","n":9,"ms":7423007,"ev":"TX","type":"KEEPALIVE","dst":"DEA","id":35775,"copy":1,"bytes":12,"air_ms":145,"dbm":17,"lbt_ms":0,"duty_pm":45}
+{"t":1792716916940,"kind":"gps","lat":-33.9595696,"lon":18.4626767,"acc":19.02199935913086,"alt":120.9000015258789,"spd":0.412428617477417,"hdg":103.97150421142578}
+{"t":1792716917949,"kind":"gps","lat":-33.9595528,"lon":18.4626915,"acc":18.27199935913086,"alt":120.9000015258789,"spd":0.22265516221523285,"hdg":103.85627746582031}
+{"t":1792716918934,"kind":"gps","lat":-33.9595467,"lon":18.4626994,"acc":17.224000930786133,"alt":120.9000015258789,"spd":0.2259717732667923,"hdg":103.41645812988281}
+{"t":1792716919949,"kind":"gps","lat":-33.9595236,"lon":18.4627077,"acc":16.611000061035156,"alt":120.9000015258789,"spd":0.994074821472168,"hdg":24.960834503173828}
+{"t":1792716920923,"kind":"gps","lat":-33.9595028,"lon":18.4627107,"acc":15.35099983215332,"alt":120.9000015258789,"spd":0.6637383103370667,"hdg":102.87630462646484}
+{"t":1792716921384,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"pos","session":"20261023-025511","lat":-33.9595028,"lon":18.4627107,"acc":15.35099983215332,"from":"ABC"}}
+{"t":1792716921561,"kind":"board","n":10,"ms":7428059,"ev":"RX","type":"MSG","src":"DEA","dst":"ABC","id":53860,"bytes":35,"rssi":-78,"snr":11.2,"dup":0,"seq":1,"path":"L"}
+{"t":1792716921562,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"pt","session":"20261023-025511","step":1,"rssi":-78,"snr":11.2,"from":"ABC"}}
+{"t":1792716921655,"kind":"board","n":11,"ms":7428059,"ev":"TX","type":"RECEIPT","dst":"DEA","id":35776,"copy":1,"bytes":12,"air_ms":145,"dbm":17,"lbt_ms":44,"duty_pm":45}
+{"t":1792716922277,"kind":"gps","lat":-33.9595786,"lon":18.4627182,"acc":12.109000205993652,"alt":120.9000015258789,"spd":0.08551812916994095,"hdg":0.0}
+{"t":1792716923274,"kind":"gps","lat":-33.959593,"lon":18.4627216,"acc":10.178000450134277,"alt":120.9000015258789,"spd":0.050068844109773636,"hdg":0.0}
+{"t":1792716924268,"kind":"gps","lat":-33.9595963,"lon":18.4627305,"acc":8.562999725341797,"alt":115.95074462890625,"spd":0.037539392709732056,"hdg":0.0}
+{"t":1792716925278,"kind":"gps","lat":-33.9595979,"lon":18.462736,"acc":6.808000087738037,"alt":116.1507568359375,"spd":0.03430315479636192,"hdg":0.0}
+{"t":1792716926276,"kind":"gps","lat":-33.9595983,"lon":18.4627388,"acc":4.739999771118164,"alt":116.1507568359375,"spd":0.08722471445798874,"hdg":0.0}
+{"t":1792716927271,"kind":"gps","lat":-33.9595985,"lon":18.4627399,"acc":3.821000099182129,"alt":116.1507568359375,"spd":0.08605954796075821,"hdg":0.0}
+{"t":1792716928267,"kind":"gps","lat":-33.9595986,"lon":18.4627409,"acc":3.703000068664551,"alt":116.1507568359375,"spd":0.0824345126748085,"hdg":0.0}
+{"t":1792716929127,"kind":"board","n":12,"ms":7435653,"ev":"GEN","seq":1,"size":25,"step":1,"lora":"queued","relay":"off"}
+{"t":1792716929268,"kind":"gps","lat":-33.9595988,"lon":18.4627408,"acc":3.2239999771118164,"alt":116.14868172735882,"spd":0.08288829028606415,"hdg":0.0}
+{"t":1792716929304,"kind":"board","n":13,"ms":7435653,"ev":"TX","type":"MSG","dst":"DEA","id":35777,"copy":1,"bytes":35,"air_ms":247,"dbm":17,"lbt_ms":0,"duty_pm":45,"seq":1,"path":"L"}
+{"t":1792716929574,"kind":"board","n":14,"ms":7436114,"ev":"RX","type":"RECEIPT","src":"DEA","dst":"ABC","id":53861,"bytes":12,"rssi":-81,"snr":11.0,"dup":0}
+{"t":1792716929620,"kind":"board","n":15,"ms":7436114,"ev":"ACK","path":"L","seq":1,"id":35777,"size":25,"rtt_ms":461,"rtt_gen_ms":461,"tries":1}
+{"t":1792716930272,"kind":"gps","lat":-33.9595993,"lon":18.4627405,"acc":3.191999912261963,"alt":116.1507568359375,"spd":0.07759741693735123,"hdg":0.0}
+{"t":1792716931270,"kind":"gps","lat":-33.9595995,"lon":18.4627404,"acc":3.013000011444092,"alt":116.1507568359375,"spd":0.0783785954117775,"hdg":0.0}
+{"t":1792716931385,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"pos","session":"20261023-025511","lat":-33.9595995,"lon":18.4627404,"acc":3.013000011444092,"from":"ABC"}}
+{"t":1792716932255,"kind":"gps","lat":-33.9595997,"lon":18.4627403,"acc":3.0,"alt":116.30000305175781,"spd":0.07733769714832306,"hdg":0.0}
+{"t":1792716933270,"kind":"gps","lat":-33.9595998,"lon":18.4627401,"acc":3.0,"alt":116.30000305175781,"spd":0.07824212312698364,"hdg":0.0}
+{"t":1792716934257,"kind":"gps","lat":-33.9595998,"lon":18.4627399,"acc":3.0,"alt":116.30000305175781,"spd":0.07725943624973297,"hdg":0.0}
+{"t":1792716934449,"kind":"ctl","dir":"in","msg":{"cmd":"stop","session":"20261023-025511","from":"DEA"}}
+{"t":1792716934658,"kind":"board","n":16,"ms":7441181,"ev":"STEP","i":0,"sf":12,"dbm":22,"restored":1}
+{"t":1792716934661,"kind":"board","n":17,"ms":7441181,"ev":"STOP","reason":"app","gen":1,"ack_l":1,"fail_l":0,"skip_l":0,"ack_r":0,"fail_r":0,"skip_r":0}
+{"t":1792716934662,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"status","session":"20261023-025511","state":"stopped","detail":"app","from":"ABC"}}
+{"t":1792716934662,"kind":"session_end","session":"20261023-025511","gen":1,"lora":{"sent":1,"ack":1,"fail":0,"skip":0},"relay":{"sent":0,"ack":0,"fail":0,"skip":0},"link_lost":0,"label":"test","steps":[{"step":1,"sf":9,"dbm":17,"sent":1,"ack":1,"fail":0,"skip":0},{"step":2,"sf":9,"dbm":22,"sent":0,"ack":0,"fail":0,"skip":0},{"step":3,"sf":12,"dbm":22,"sent":0,"ack":0,"fail":0,"skip":0}]}

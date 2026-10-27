@@ -1,0 +1,1 @@
+session,label,step,sf,dbm,from_role,from,to,sent,delivered,failed,skipped,rate_pct,first_try_pct,rtt_median_ms,packets_heard,rssi_median,rssi_min,snr_median,snr_min,margin_db,distance_m,distance_from,skew_ms,source

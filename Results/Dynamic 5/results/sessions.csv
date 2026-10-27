@@ -1,0 +1,5 @@
+session,test,sf,tx_dbm,from_role,path,made,delivered,failed,skipped,rate_pct,first_try_pct,rtt_median_ms,rtt_p95_ms
+20261023-153101,dynamic,12,22,base,LoRa,14,8,2,4,80.0,70.0,3759,8658
+20261023-153101,dynamic,12,22,base,relay,14,10,4,0,71.4,71.4,945,1005
+20261023-153101,dynamic,12,22,rover,LoRa,15,8,1,6,88.9,77.8,5236,22374
+20261023-153101,dynamic,12,22,rover,relay,15,11,4,0,73.3,73.3,881,929

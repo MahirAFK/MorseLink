@@ -1,0 +1,5 @@
+session,test,from_role,path,made,delivered,failed,skipped,rate_pct,rtt_median_ms,rtt_p95_ms
+20261015-185651,dynamic,base,LoRa,262,76,4,182,95.0,681,7534
+20261015-185651,dynamic,base,relay,262,259,3,0,98.9,876,1342
+20261015-185651,dynamic,rover,LoRa,263,76,8,179,90.5,641,7638
+20261015-185651,dynamic,rover,relay,263,261,2,0,99.2,904,1381

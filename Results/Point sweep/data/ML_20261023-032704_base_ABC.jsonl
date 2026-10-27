@@ -1,0 +1,26 @@
+{"t":1792718826653,"kind":"session","session":"20261023-032704","role":"base","test":"point","paths":"lora","seed":1662297472,"tx_dbm":22,"sf":12,"bw_khz":125,"base":"500m from base","height":"outside","carry":"hand","battery":"","note":"","label":"t","plan":"9:22","peer_radio":{"sf":12,"bw":125,"dbm":22},"phone":"","app":"0.2.2","protocol":4,"fw":"0.6.2","clock":"network (assumed: set the phone to automatic time)","own":"ABC","peer":"DEA"}
+{"t":1792718826653,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"status","session":"20261023-032704","state":"starting","from":"ABC"}}
+{"t":1792718826654,"kind":"ctl","dir":"in","msg":{"cmd":"radio","from":"DEA","board":true,"sf":9,"bw":125,"dbm":22}}
+{"t":1792718826849,"kind":"board","n":10,"ms":9333385,"ev":"START","session":"20261023-032704","role":"base","test":"point","paths":"lora","seed":1662297472,"tx_dbm":22,"sf":12,"fw":"0.6.2","own":"ABC","peer":"DEA","lb":0,"plan":"9:22","size":25}
+{"t":1792718826850,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"status","session":"20261023-032704","state":"running","from":"ABC"}}
+{"t":1792718826852,"kind":"board","n":10,"ms":9333385,"ev":"STEP","i":1,"sf":9,"dbm":22,"step_ms":175000}
+{"t":1792718826854,"kind":"board","n":3,"ms":9333385,"ev":"PATH","path":"L","state":"checking","heard_s":-1,"they_s":3}
+{"t":1792718826856,"kind":"board","n":4,"ms":9333385,"ev":"PATH","path":"R","state":"off","heard_s":2,"they_s":60}
+{"t":1792718827211,"kind":"dev","line":"ST DEA connected 88 0 checking off"}
+{"t":1792718827213,"kind":"dev","line":"RD 9 125 22"}
+{"t":1792718827214,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"radio","from":"ABC","board":true,"sf":9,"bw":125,"dbm":22}}
+{"t":1792718827923,"kind":"board","n":5,"ms":9334516,"ev":"RX","type":"KEEPALIVE","src":"DEA","dst":"ABC","id":54041,"bytes":12,"rssi":-99,"snr":9.2,"dup":0}
+{"t":1792718831758,"kind":"board","n":6,"ms":9338174,"ev":"TX","type":"KEEPALIVE","dst":"DEA","id":35959,"copy":1,"bytes":12,"air_ms":145,"dbm":22,"lbt_ms":0,"duty_pm":54}
+{"t":1792718832652,"kind":"board","n":7,"ms":9339227,"ev":"RX","type":"KEEPALIVE","src":"DEA","dst":"ABC","id":54042,"bytes":12,"rssi":-99,"snr":9.2,"dup":0}
+{"t":1792718832654,"kind":"board","n":8,"ms":9339227,"ev":"PATH","path":"L","state":"connected","heard_s":0,"they_s":0}
+{"t":1792718832656,"kind":"dev","line":"ST DEA connected 88 0 connected off"}
+{"t":1792718833012,"kind":"board","n":9,"ms":9339452,"ev":"TX","type":"KEEPALIVE","dst":"DEA","id":35960,"copy":1,"bytes":12,"air_ms":145,"dbm":22,"lbt_ms":0,"duty_pm":54}
+{"t":1792718833734,"kind":"board","n":10,"ms":9340305,"ev":"RX","type":"MSG","src":"DEA","dst":"ABC","id":54043,"bytes":35,"rssi":-102,"snr":8.8,"dup":0,"seq":1,"path":"L"}
+{"t":1792718833737,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"pt","session":"20261023-032704","step":1,"rssi":-102,"snr":8.8,"from":"ABC"}}
+{"t":1792718833913,"kind":"board","n":11,"ms":9340305,"ev":"TX","type":"RECEIPT","dst":"DEA","id":35961,"copy":1,"bytes":12,"air_ms":145,"dbm":22,"lbt_ms":80,"duty_pm":54}
+{"t":1792718836674,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"pos","session":"20261023-032704","lat":-33.9596091,"lon":18.462765,"acc":9.9350004196167,"from":"ABC"}}
+{"t":1792718839657,"kind":"ctl","dir":"in","msg":{"cmd":"stop","session":"20261023-032704","from":"DEA"}}
+{"t":1792718839901,"kind":"board","n":12,"ms":9346433,"ev":"STEP","i":0,"sf":12,"dbm":22,"restored":1}
+{"t":1792718839903,"kind":"board","n":13,"ms":9346433,"ev":"STOP","reason":"app","gen":0,"ack_l":0,"fail_l":0,"skip_l":0,"ack_r":0,"fail_r":0,"skip_r":0}
+{"t":1792718839905,"kind":"ctl","dir":"out","to":"DEA","msg":{"cmd":"status","session":"20261023-032704","state":"stopped","detail":"app","from":"ABC"}}
+{"t":1792718839905,"kind":"session_end","session":"20261023-032704","gen":0,"lora":{"sent":0,"ack":0,"fail":0,"skip":0},"relay":{"sent":0,"ack":0,"fail":0,"skip":0},"link_lost":0,"label":"t","steps":[{"step":1,"sf":9,"dbm":22,"sent":0,"ack":0,"fail":0,"skip":0}]}

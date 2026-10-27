@@ -1,0 +1,7 @@
+session,test,sf,tx_dbm,from_role,path,made,delivered,failed,skipped,rate_pct,first_try_pct,rtt_median_ms,rtt_p95_ms
+20261026-182908,dynamic,9,22,base,LoRa,34,32,1,1,97.0,78.8,700,3495
+20261026-182908,dynamic,9,22,base,relay,34,33,1,0,97.1,97.1,1141,1576
+20261026-182908,dynamic,9,22,rover,LoRa,33,31,2,0,93.9,84.8,641,2825
+20261026-182908,dynamic,9,22,rover,relay,33,33,0,0,100.0,100.0,1337,3457
+20261026-183848,point,9,22,base,LoRa,60,60,0,0,100.0,93.3,464,3094
+20261026-183848,point,9,22,rover,LoRa,60,59,1,0,98.3,90.0,465,3094

@@ -1,0 +1,4 @@
+session,board,role,sf,tx_dbm,start_min,end_min,minutes,why,rebuilt,open_at_end
+20261023-153101,ABC,base,12,22,14.57,22.54,7.97,no-receipt,0,0
+20261023-153101,ABC,base,12,22,23.66,24.42,0.76,no-receipt,0,0
+20261023-153101,DEA,rover,12,22,13.19,24.46,11.27,no-receipt,0,0
